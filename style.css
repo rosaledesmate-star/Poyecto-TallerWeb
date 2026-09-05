@@ -1,0 +1,9 @@
+table {   border:1px solid black;
+    border-collapse: separate;
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: rgb(22, 103, 207);
+
+}
+
