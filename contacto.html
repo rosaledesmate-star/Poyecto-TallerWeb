@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+
+        <section class="contacto-container">
+
+            <table class="tabla-contacto">
+                <thead>
+                    <tr>
+                        <th colspan="2">Datos de contacto</th>
+                    </tr>
+                </thead>
+
+            <tbody>
+                <tr>
+                   <td>Dirección:</td>
+                   <td>Lurín, Lima, Perú. </td>  
+                </tr> 
+
+                <tr>
+                   <td>WhatsApp:</td>
+                   <td>(+51) --- --- ---</td>  
+                </tr>
+
+                <tr>
+                   <td>Teléfono:</td>
+                   <td>(01) --- ---- </td>  
+                </tr>
+
+                <tr>
+                   <td>Correo:</td>
+                   <td>trans_proa@hotmail.com</td>  
+                </tr>
+  
+            </tbody>
+            </table>
+
+        <form class="formulario-contacto" action="#" method="POST">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Tu email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto">
+
+            <label for="mensaje">Tu mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <footer>
+            <p>&copy; 2026 Transporte PROA. Todos los derechos reservados.</p>
+        </footer>
+
+        </section>
+    </main>
+</body>
+</html>
