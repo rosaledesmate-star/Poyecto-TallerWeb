@@ -1,4 +1,4 @@
-.container {
+ .container {
     display: flex;
 }
 .logo {
@@ -12,13 +12,13 @@
     text-decoration: none;
     font-weight: bold;
     color:black;
-    font-family: 'Gill Sans';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .coloracercade{
     text-decoration: none;
     font-weight: bold;
     color:rgba(50, 190, 245, 0.89);
-    font-family: 'Gill Sans';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .fondopresentacion {
     width: 100%;
@@ -35,12 +35,75 @@
     font-size: 40px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Gill Sans';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .QUIENES {
     background-color: rgb(243, 239, 239);
     display: flex;
 }
+.textoinformativo {
+    text-align: center;
+    width: 30%;
+    margin-top: 130px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.QUIENES img {
+    width: 300px;
+    height: 310px;
+    margin-top: 100px
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 20px 60px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+main > section:first-child {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.intro-servicios {
+    background-color: #f4f6f8;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;         
+    
+}
+.servicio {
+    border-bottom: 1px solid #dddddd;
+    padding: 35px 20px;
+    margin-bottom: 20px;
+}
+.servicio header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.servicio span {
+    color: red;
+    font-size: 48px;
+    font-weight: bold;
+}
+.servicio p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 0 75px;
+}
+
 .textoinformativo {
     text-align: center;
     width: 30%;
@@ -130,7 +193,6 @@ body {
     max-width: 500px ;
     margin-bottom: 25px;
     color: white;
-    
 }
 .boton {
     display: flex;
@@ -236,5 +298,61 @@ footer a:last-child {
   margin-top:25px;
   border: 1px solid white;
   padding: 10px ;
+}
+.container {
+    display: flex;
+}
+.logo {
+    margin-right: 60%
+}
+.menu-container {
+    width: 20%;
+    margin: 30px 10px
+}
+.color {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    font-family: 'Gill Sans';
+}
+.coloracercade{
+    text-decoration: none;
+    font-weight: bold;
+    color:rgba(50, 190, 245, 0.89);
+    font-family: 'Gill Sans';
+}
+.fondopresentacion {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/PersonaTrabajandoconcarga.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.textofrente {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+}
+.QUIENES {
+    background-color: rgb(243, 239, 239);
+    display: flex;
+}
+.textoinformativo {
+    text-align: center;
+    width: 30%;
+    margin-top: 130px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Gill Sans';
+}
+.QUIENES img {
+    width: 300px;
+    height: 310px;
+    margin-top: 100px;
 
 }
