@@ -1,2 +1,0 @@
-# Poyecto-TallerWeb
-Poyecto Grupal
