@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    width:100% ;
     font-family: Arial, sans-serif;
 }
 .header {
@@ -25,11 +26,70 @@ body {
     margin: 0;
     padding: 0;
 }
-.banner {
-    background-color: #607D8B;
-    min-height: 400px;
+.barnav a {
     color: white;
-    padding: 50px;
+    text-decoration: none;
+}
+
+.barnav a:hover {
+    text-decoration: underline;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+
+    background-image: url("imagenbanner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+   display: flex;
+   align-items: center;
+}
+.banner-content {
+    position: relative;
+    width: 40%;
+    max-width: 600px;
+    margin-left: 7%;
+    padding: 40px 10px 70px;
+    
+}
+.banner-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color:#1F3D5A
+}
+.banner-content h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    color:white;
+    font-weight: 700;
+}
+.text-banner {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 500px ;
+    margin-bottom: 25px;
+    color: white;
+    
+}
+.boton {
+    display: flex;
+    gap:15px;
+}
+.boton a {
+    background-color: #1F3D5A;
+    color:white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.boton a:hover {
+    background-color: #163047;
 }
 .article {
     background-color: white;
@@ -41,6 +101,20 @@ body {
 }
 .text-article {
     color: black;
+     font-size: 16px;
+    line-height: 1.5;
+    max-width: 400px ;
+    margin-bottom: 25px;
+
+}
+.text-article a {
+    background-color: #1F3D5A;
+    color:white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+
 }
 .valores {
     background-color: black ;
@@ -72,6 +146,17 @@ body {
     color: #1F3D5A;
     padding: 50px;
 }
+.servicio-destacado a{
+    background-color: #1F3D5A;
+    color:white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block;
+}
+
 .cobertura {
     background-color: black ;
     min-height: 400px;
