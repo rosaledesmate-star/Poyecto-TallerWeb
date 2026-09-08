@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav a:hover {
+  color: #030f4e;
+}
+
+main {
+  padding: 20px;
+}
+
+/*Borde de la tabla*/
+.tabla-contacto th,
+.tabla-contacto td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: left;
+}
+
+/*Color a la cabera de datos de contacto*/
+.tabla-contacto th {
+  background-color: #0094d8;
+  color: white;
+}
+
+/*Color a la fila de datos que esta por seleccionar*/
+.tabla-contacto tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* FORMULARIO - propiedades de la Semana 3 */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+/*formulario del contacto*/
+.formulario-contacto label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/*Marcos de los cuadrados*/
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* marcos de los cuadrados si el mouse pasa por encima*/
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #a1112c;
+  outline: none;
+}
+
+/*Boton de enviar*/
+.formulario-contacto button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #3886b4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/*Boton de enviar si preciona*/
+.formulario-contacto button:hover {
+  background-color: #3000a8;
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+
+  color: black;
+}
