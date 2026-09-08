@@ -6,7 +6,7 @@
 }
 
 header nav a:hover {
-  color: #030f4e;
+  color: #d41702;
 }
 
 main {
@@ -84,4 +84,14 @@ footer {
   text-align: center;
   padding: 15px;
   color: black;
+}
+
+
+body {
+  background-color: #00aeff;
+}
+
+main {
+  background-color: white;
+  padding: 30px;
 }
