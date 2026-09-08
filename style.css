@@ -1,4 +1,51 @@
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 20px 60px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+main > section:first-child {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.intro-servicios {
+    background-color: #f4f6f8;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;         
+    
+}
+.servicio {
+    border-bottom: 1px solid #dddddd;
+    padding: 35px 20px;
+    margin-bottom: 20px;
+}
+.servicio header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.servicio span {
+    color: red;
+    font-size: 48px;
+    font-weight: bold;
+}
+.servicio p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 0 75px;
+}
 
 body {
     margin: 0;
@@ -74,7 +121,6 @@ body {
     max-width: 500px ;
     margin-bottom: 25px;
     color: white;
-    
 }
 .boton {
     display: flex;
@@ -236,4 +282,5 @@ footer a:last-child {
     width: 300px;
     height: 310px;
     margin-top: 100px;
+
 }
