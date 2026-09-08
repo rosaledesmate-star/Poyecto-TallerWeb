@@ -32,7 +32,13 @@ main {
   background-color: #f2f2f2;
 }
 
-
+/*Mas ordenado*/
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
 
 /*formulario del contacto*/
 .formulario-contacto label {
