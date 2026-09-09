@@ -12,6 +12,7 @@ nav {
     border-bottom: 1px solid #eeeeee;
 }
 
+
 main > section:first-child {
     text-align: center;
     padding: 70px 20px 50px;
@@ -42,6 +43,10 @@ main > section:first-child {
     font-size: 48px;
     font-weight: bold;
 }
+
+/* 
+   Estilo para los párrafos de cada servicio
+*/
 
 .servicio p {
     font-size: 16px;
