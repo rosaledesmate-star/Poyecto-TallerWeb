@@ -16,63 +16,119 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Contacto</h1>
+    <main id="contenido">
+    
+    <!-- FRANJA AZUL A TODO EL ANCHO -->
+    <section class="contacto-banner">
+      <div class="container section-title">
+        <h1>Contáctanos</h1>
+        <p>Estamos disponibles para atender tus consultas y coordinar los detalles de tu servicio de transporte con plataforma. Escríbenos para brindarte información sobre tu solicitud.</p>
+      </div>
+    </section>
 
-        <section class="contacto-container">
+    <!-- TARJETAS BLANCAS -->
+    <section class="section">
+      <div class="container">
+        <div class="contacto-container">
+
+          <!-- DATOS DE CONTACTO -->
+          <section class="contacto-datos" id="datos">
+            <h2>Datos de contacto</h2>
 
             <table class="tabla-contacto">
-                <thead>
-                    <tr>
-                        <th colspan="2">Datos de contacto</th>
-                    </tr>
-                </thead>
-
-            <tbody>
+              <tbody>
                 <tr>
-                   <td>Dirección:</td>
-                   <td>Lurín, Lima, Perú. </td>  
-                </tr> 
-
-                <tr>
-                   <td>WhatsApp:</td>
-                   <td>(+51) --- --- ---</td>  
+                  <th scope="row">Dirección</th>
+                  <td>Lurín, Lima, Perú</td>
                 </tr>
-
                 <tr>
-                   <td>Teléfono:</td>
-                   <td>(01) --- ---- </td>  
+                  <th scope="row">WhatsApp</th>
+                  <td>Completar número de contacto</td>
                 </tr>
-
                 <tr>
-                   <td>Correo:</td>
-                   <td>trans_proa@hotmail.com</td>  
+                  <th scope="row">Teléfono</th>
+                  <td>Completar número telefónico</td>
                 </tr>
-  
-            </tbody>
+                <tr>
+                  <th scope="row">Correo</th>
+                  <td><a href="mailto:trans_proa@hotmail.com">trans_proa@hotmail.com</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Horario</th>
+                  <td>Lunes a sábado, de 8:00 a. m. a 6:00 p. m.</td>
+                </tr>
+                
+              </tbody>
             </table>
+          </section>
 
-        <form class="formulario-contacto" action="#" method="POST">
-            <label for="nombre">Tu nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
+          <!-- FORMULARIO -->
+          <section class="contacto-formulario">
+            <h2>Envíanos un mensaje</h2>
+            <p>Completa los siguientes campos para realizar tu consulta.</p>
 
-            <label for="email">Tu email</label>
-            <input type="email" id="email" name="email" required>
+            <form class="formulario-contacto" action="#" method="POST">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" name="asunto">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <label for="mensaje">Tu mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" required>
 
-            <button type="submit">Enviar mensaje</button>
-        </form>
+              <label for="mensaje">Tu mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-        <footer>
-            <p>&copy; 2026 Transporte PROA. Todos los derechos reservados.</p>
-        </footer>
+              <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+            </form>
+          </section>
 
-        </section>
-    </main>
-</body>
-</html>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA DE TRANSPORTE PROA -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <a class="footer-logo" href="inicio.html">
+          <img src="logo.png" alt="Logotipo de TRANSPORTE PROA S.A.C."
+               width="403" height="300" loading="lazy">
+        </a>
+        <p>Transporte de carga con plataforma.</p>
+      </div>
+
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="acerca-de.html">Acerca de</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>
+            <a href="mailto:trans_proa@hotmail.com">
+              trans_proa@hotmail.com
+            </a>
+          </li>
+          <li>Lunes a sábado, de 8:00 a. m. a 6:00 p. m.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; <span data-year>2026</span>
+        TRANSPORTE PROA S.A.C. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>

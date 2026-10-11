@@ -1,97 +1,186 @@
-* {
-  margin: 0;
-  padding: 0;
+/* ==============================
+   ESTILOS DE LA PÁGINA CONTACTO
+============================== */
+
+/* Banner azul superior */
+.contacto-banner {
+  width: 100%;
+  padding: 55px 0;
+  background-color: #0D3896;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-header nav a:hover {
-  color: #d41702;
+.contacto-banner .section-title {
+  margin: 0;
+  padding: 0 20px;
+  background: transparent;
+  text-align: left;
+  box-sizing: border-box;
 }
 
-main {
-  padding: 20px;
+.contacto-banner .section-title h1 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 2.2rem;
 }
 
-/*Borde de la tabla*/
+.contacto-banner .section-title p {
+  max-width: 750px;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+/* Contenido y tarjetas de contacto */
+#contenido > .section {
+  padding-top: 32px;
+}
+
+.contacto-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 0;
+}
+
+.contacto-datos,
+.contacto-formulario {
+  min-width: 0;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(13, 56, 150, 0.06);
+}
+
+.contacto-datos h2,
+.contacto-formulario h2 {
+  margin-bottom: 12px;
+  color: #0D3896;
+}
+
+.contacto-formulario > p {
+  margin-bottom: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Tabla de datos de contacto */
+.tabla-contacto {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+}
+
 .tabla-contacto th,
 .tabla-contacto td {
-  border: 1px solid #ccc;
-  padding: 15px;
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
   text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
 }
 
-/*Color a la cabera de datos de contacto*/
 .tabla-contacto th {
-  background-color: #0094d8;
-  color: white;
+  width: 36%;
+  color: #0D3896;
+  font-weight: 600;
 }
 
-/*Color a la fila de datos que esta por seleccionar*/
-.tabla-contacto tr:hover {
-  background-color: #f2f2f2;
+.tabla-contacto td {
+  color: #374151;
 }
 
+.tabla-contacto tr:last-child th,
+.tabla-contacto tr:last-child td {
+  border-bottom: none;
+}
 
-/*Mas ordenado*/
+.tabla-contacto a {
+  color: #0D3896;
+  overflow-wrap: anywhere;
+}
+
+/* Formulario de contacto */
 .formulario-contacto {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  margin-top: 16px;
 }
 
-/*formulario del contacto*/
 .formulario-contacto label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #444;
+  margin: 14px 0 6px;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-/*Marcos de los cuadrados*/
 .formulario-contacto input,
 .formulario-contacto textarea {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1f2937;
+  font: inherit;
+  box-sizing: border-box;
 }
 
-
-/* marcos de los cuadrados si el mouse pasa por encima*/
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
-  border-color: #a1112c;
-  outline: none;
+  border-color: #0D3896;
+  outline: 3px solid rgba(13, 56, 150, 0.12);
 }
 
-/*Boton de enviar*/
+.formulario-contacto textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
 .formulario-contacto button {
+  align-self: flex-start;
   margin-top: 20px;
-  padding: 12px 20px;
-  background-color: #3886b4;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  cursor: pointer;
 }
 
-/*Boton de enviar si preciona*/
-.formulario-contacto button:hover {
-  background-color: #3000a8;
+/* Diseño adaptable para tablets y celulares */
+@media (max-width: 768px) {
+  .contacto-banner {
+    padding: 40px 0;
+  }
+
+  .contacto-banner .section-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contacto-datos,
+  .contacto-formulario {
+    padding: 18px;
+  }
 }
 
+/* Ajustes para celulares pequeños */
+@media (max-width: 480px) {
+  .tabla-contacto th,
+  .tabla-contacto td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  color: black;
-}
+  .tabla-contacto th {
+    width: 34%;
+  }
 
-
-body {
-  background-color: #00aeff;
-}
-
-main {
-  background-color: white;
-  padding: 30px;
+  .formulario-contacto button {
+    width: 100%;
+  }
 }
