@@ -1,78 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="contacto.css">
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+ 
+  <title>Contacto | TRANSPORTE PROA</title>
+  <meta name="description" content="Contacta con TRANSPORTE PROA para consultar nuestros servicios de transporte de carga.">
+ 
+  <link rel="stylesheet" href="contacto.css">
 </head>
+ 
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="acerca_de.html">Acerca de</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Contacto</h1>
-
-        <section class="contacto-container">
-
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+ 
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="menu">
+      <a class="logo" href="index.html" aria-label="TRANSPORTE PROA - Inicio">
+        <img src="logo.svg" alt="Logotipo de TRANSPORTE PROA">
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="barnav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acerca_de.html">Acerca de</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- CONTENIDO DE CONTACTO -->
+  <main id="contenido">
+ 
+    <!-- FRANJA AZUL A TODO EL ANCHO -->
+    <section class="contacto-banner">
+      <div class="container section-title">
+        <h1>Contáctanos</h1>
+        <p>Estamos disponibles para atender tus consultas y coordinar los detalles de tu servicio de transporte con plataforma. Escríbenos para brindarte información sobre tu solicitud.</p>
+      </div>
+    </section>
+ 
+    <!-- TARJETAS BLANCAS -->
+    <section class="section">
+      <div class="container">
+        <div class="contacto-container">
+ 
+          <!-- DATOS DE CONTACTO -->
+          <section class="contacto-datos" id="datos">
+            <h2>Datos de contacto</h2>
+ 
             <table class="tabla-contacto">
-                <thead>
-                    <tr>
-                        <th colspan="2">Datos de contacto</th>
-                    </tr>
-                </thead>
-
-            <tbody>
+              <tbody>
                 <tr>
-                   <td>Dirección:</td>
-                   <td>Lurín, Lima, Perú. </td>  
-                </tr> 
-
-                <tr>
-                   <td>WhatsApp:</td>
-                   <td>(+51) --- --- ---</td>  
+                  <th scope="row">Dirección</th>
+                  <td>Lurín, Lima, Perú</td>
                 </tr>
-
                 <tr>
-                   <td>Teléfono:</td>
-                   <td>(01) --- ---- </td>  
+                  <th scope="row">WhatsApp</th>
+                  <td>Completar número de contacto</td>
                 </tr>
-
                 <tr>
-                   <td>Correo:</td>
-                   <td>trans_proa@hotmail.com</td>  
+                  <th scope="row">Teléfono</th>
+                  <td>Completar número telefónico</td>
                 </tr>
-  
-            </tbody>
+                <tr>
+                  <th scope="row">Correo</th>
+                  <td><a href="mailto:trans_proa@hotmail.com">trans_proa@hotmail.com</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Horario</th>
+                  <td>Lunes a sábado, de 8:00 a. m. a 6:00 p. m.</td>
+                </tr>
+              </tbody>
             </table>
-
-        <form class="formulario-contacto" action="#" method="POST">
-            <label for="nombre">Tu nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Tu email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" name="asunto">
-
-            <label for="mensaje">Tu mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-
-            <button type="submit">Enviar mensaje</button>
-        </form>
-
-        <footer>
-            <p>&copy; 2026 Transporte PROA. Todos los derechos reservados.</p>
-        </footer>
-
-        </section>
-    </main>
+          </section>
+ 
+          <!-- FORMULARIO -->
+          <section class="contacto-formulario">
+            <h2>Envíanos un mensaje</h2>
+            <p>Completa los siguientes campos para realizar tu consulta.</p>
+ 
+            <form class="formulario-contacto" action="#" method="POST">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+ 
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+ 
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" required>
+ 
+              <label for="mensaje">Tu mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+ 
+              <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+            </form>
+          </section>
+ 
+        </div>
+      </div>
+    </section>
+  </main>
+ 
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <h3>TRANSPORTE PROA S.A.C</h3>
+    <p>Transporte de carga con plataforma</p>
+    <p><a href="mailto:trans_proa@hotmail.com">trans_proa@hotmail.com</a></p>
+    <p>&copy; 2026 Transporte Proa S.A.C. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
