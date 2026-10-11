@@ -1,17 +1,90 @@
-nav ul {
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* NAV celular*/
+.cabecera {
+    background-color:#FFFFFF;
+    border-bottom: 1px solid #DDE1E6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    height: clamp(2.5rem, 8vw, 3.5rem);
+    width: auto;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    gap: 0.5rem 1.25rem;
 }
 
-nav {
-    padding: 20px 60px;
-    border-bottom: 1px solid #eeeeee;
+.nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    font-family: "Montserrat", "Arial Black", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1rem);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: #3F4551;
 }
 
+/* Tablet (breakpoint 1) */
+@media (min-width: 48rem) {
+    .navbar-menu {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+}
+
+/* Escritorio (breakpoint 2) */
+@media (min-width: 64rem) {
+    .navbar-menu {
+        padding: 1rem 3rem;
+    }
+
+    .nav-links {
+        gap: 2.5rem;
+    }
+}
 
 main > section:first-child {
     text-align: center;
