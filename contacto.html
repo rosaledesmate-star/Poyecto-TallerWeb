@@ -15,7 +15,6 @@
 </head>
  
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
  
   <!-- ENCABEZADO -->
   <header class="site-header">
@@ -36,7 +35,7 @@
           <li><a class="nav-link" href="servicios.html">Servicios</a></li>
           <li><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
           <li class="nav-cta">
-            <a class="btn btn--primary btn--sm" href="#cotizacion">Solicitar cotización</a>
+            <a class="btn" href="#cotizacion">Solicitar cotización</a>
           </li>
         </ul>
       </nav>
@@ -168,7 +167,7 @@
                 <span>Acepto recibir información de la empresa.</span>
               </label>
  
-              <button class="btn btn--cotizar" type="submit">Cotizar ahora</button>
+              <button class="btn-cotizar" type="submit">Cotizar ahora</button>
             </form>
           </section>
  
@@ -189,21 +188,10 @@
     /* Menú móvil */
     var toggle = document.querySelector(".nav-toggle");
     var nav = document.getElementById("main-nav");
-    if (toggle && nav) {
-      toggle.addEventListener("click", function () {
-        var open = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && nav.classList.contains("open")) {
-          nav.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-label", "Abrir menú");
-          toggle.focus();
-        }
-      });
-    }
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
  
     /* Envía la cotización al correo de la empresa (abre el programa de correo del cliente) */
     var formCot = document.getElementById("form-cotizacion");

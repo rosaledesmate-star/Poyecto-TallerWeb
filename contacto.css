@@ -1,22 +1,10 @@
-/* ==============================
-   PÁGINA DE CONTACTO - TRANSPORTE PROA
-   (solo estilos que usa contacto.html)
-============================== */
- 
-/* ---------- 1. BASE ---------- */
+/* 1. BASE: colores, fuente y ancho de la página */
 :root {
   --azul: #0D3896;
-  --azul-oscuro: #082A70;
-  --azul-pie: #081F5C;
   --texto: #1B2333;
-  --borde: #DCE3EE;
-  --fondo-suave: #F1F5FB;
-  --fuente: "Montserrat", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
  
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
  
@@ -27,16 +15,18 @@ html {
  
 body {
   margin: 0;
-  background: #ffffff;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
   color: var(--texto);
-  font-family: var(--fuente);
   line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
 }
  
 img {
   display: block;
   max-width: 100%;
+}
+ 
+a {
+  color: var(--azul);
 }
  
 h1,
@@ -52,7 +42,6 @@ p {
 }
  
 .container {
-  width: 100%;
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
@@ -62,85 +51,27 @@ p {
   padding: 32px 0 72px;
 }
  
-/* Evita que el encabezado fijo tape el destino de los enlaces #datos y #cotizacion */
 #datos,
 #cotizacion {
   scroll-margin-top: 100px;
 }
  
-/* ---------- 2. ACCESIBILIDAD ---------- */
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: -999px;
-  z-index: 300;
-  padding: 10px 16px;
-  background: var(--azul);
-  color: #ffffff;
-}
- 
-.skip-link:focus {
-  top: 10px;
-  left: 10px;
-}
- 
-:focus-visible {
-  outline: 3px solid var(--azul);
-  outline-offset: 2px;
-}
- 
-/* ---------- 3. BOTONES ---------- */
-.btn {
-  display: inline-block;
-  padding: 13px 26px;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
- 
-.btn:hover {
-  transform: translateY(-2px);
-}
- 
-.btn--primary {
-  background: var(--azul);
-  color: #ffffff;
-}
- 
-.btn--primary:hover {
-  background: var(--azul-oscuro);
-}
- 
-.btn--sm {
-  padding: 9px 18px;
-  font-size: 0.95rem;
-}
- 
-/* ---------- 4. ENCABEZADO ---------- */
+/* 2. ENCABEZADO: logo, menú y botón */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 200;
-  background: #ffffff;
-  border-bottom: 1px solid var(--borde);
-  box-shadow: 0 2px 10px rgba(15, 63, 168, 0.08);
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(13, 56, 150, 0.12);
 }
  
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 8px;
   height: 84px;
 }
  
 .logo {
-  display: flex;
-  align-items: center;
   margin-right: auto;
 }
  
@@ -159,49 +90,46 @@ p {
 }
  
 .nav-link {
-  position: relative;
   display: block;
   padding: 10px 14px;
   border-radius: 6px;
   color: var(--azul);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s, background 0.2s;
 }
  
 .nav-link:hover {
-  background: var(--fondo-suave);
-  color: var(--azul-oscuro);
+  background: #F1F5FB;
 }
  
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  right: 14px;
-  bottom: 4px;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background: var(--azul);
+.nav-link.active {
+  box-shadow: inset 0 -3px 0 var(--azul);
 }
  
 .nav-cta {
   margin-left: 8px;
 }
  
-/* Botón de menú (solo celular) */
+.btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+ 
+.btn:hover {
+  background: #082A70;
+}
+ 
 .nav-toggle {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 46px;
-  height: 42px;
-  padding: 0;
+  padding: 8px 10px;
   border: 2px solid var(--azul);
   border-radius: 8px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
 }
  
@@ -209,42 +137,29 @@ p {
   display: block;
   width: 22px;
   height: 2px;
+  margin: 5px 0;
   background: var(--azul);
-  transition: transform 0.25s, opacity 0.25s;
 }
  
-.nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
- 
-.nav-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
- 
-.nav-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
- 
-/* ---------- 5. BANNER AZUL ---------- */
+/* 3. BANNER AZUL: título y descripción */
 .contacto-banner {
   padding: 55px 0;
   background: var(--azul);
+  color: #fff;
 }
  
 .contacto-banner h1 {
   margin: 0 0 14px;
-  color: #ffffff;
+  color: #fff;
   font-size: 2.2rem;
 }
  
 .contacto-banner p {
   max-width: 750px;
   margin: 0;
-  color: #ffffff;
-  line-height: 1.8;
 }
  
-/* ---------- 6. TARJETAS Y DATOS DE CONTACTO ---------- */
+/* 4. TARJETAS: datos a la izquierda, formulario a la derecha */
 .contacto-container {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
@@ -254,25 +169,14 @@ p {
  
 .contacto-datos,
 .contacto-formulario {
-  min-width: 0;
-  padding: 24px;
-  border: 1px solid #e2e8f0;
+  padding: 28px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(13, 56, 150, 0.06);
+  box-shadow: 0 4px 16px rgba(13, 56, 150, 0.1);
 }
  
-.contacto-datos {
-  background: #ffffff;
-}
- 
-.contacto-datos h2 {
-  margin-bottom: 12px;
-  font-size: 1.6rem;
-}
- 
+/* 5. TABLA: datos de contacto de la empresa */
 .tabla-contacto {
   width: 100%;
-  margin-top: 16px;
   border-collapse: collapse;
   overflow-wrap: anywhere;
 }
@@ -283,51 +187,28 @@ p {
   border-bottom: 1px solid #e2e8f0;
   text-align: left;
   vertical-align: top;
-  line-height: 1.6;
 }
  
 .tabla-contacto th {
   width: 36%;
   color: var(--azul);
-  font-weight: 600;
 }
  
-.tabla-contacto td {
-  color: #374151;
-}
- 
-.tabla-contacto tr:last-child th,
-.tabla-contacto tr:last-child td {
-  border-bottom: none;
-}
- 
-.tabla-contacto a {
-  color: var(--azul);
-}
- 
-/* ---------- 7. FORMULARIO DE COTIZACIÓN ---------- */
+/* 6. FORMULARIO: tarjeta oscura con foto de fondo */
 .contacto-formulario {
-  padding: 32px 28px;
-  border: none;
-  background:
-    linear-gradient(rgba(8, 31, 92, 0.90), rgba(6, 28, 84, 0.93)),
-    url("imagenbanner.jpeg") center / cover no-repeat;
-  color: #ffffff;
-  box-shadow: 0 12px 32px rgba(13, 56, 150, 0.25);
+  background: linear-gradient(rgba(8, 31, 92, 0.9), rgba(6, 28, 84, 0.93)), url("imagenbanner.jpeg") center / cover;
+  color: #fff;
 }
  
 .contacto-formulario h2 {
-  margin: 0 0 6px;
-  color: #ffffff;
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
  
 .contacto-formulario > p {
-  margin: 0 0 22px;
-  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 22px;
   text-align: center;
 }
  
@@ -342,14 +223,9 @@ p {
   margin: 8px 0 0;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+  color: #fff;
   font-size: 1rem;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-}
- 
-.grupo-titulo:first-child {
-  margin-top: 0;
 }
  
 .campo {
@@ -359,127 +235,89 @@ p {
   min-width: 0;
 }
  
-.campo--full {
-  grid-column: 1 / -1;
-}
- 
 .campo label {
   font-size: 0.9rem;
   font-weight: 600;
+}
+ 
+.campo--full,
+.check,
+.btn-cotizar {
+  grid-column: 1 / -1;
 }
  
 .req {
   color: #9CC3FF;
 }
  
-.formulario-contacto input:not([type="checkbox"]),
-.formulario-contacto select,
-.formulario-contacto textarea {
+/* 7. CAMPOS: cajas translúcidas, casillas y botón blanco */
+input:not([type="checkbox"]),
+select,
+textarea {
   width: 100%;
   padding: 13px 14px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
   font: inherit;
   color-scheme: dark;
 }
  
-.formulario-contacto ::placeholder {
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #fff;
+}
+ 
+::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
  
-.formulario-contacto select {
-  padding-right: 40px;
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  cursor: pointer;
-}
- 
-.formulario-contacto select:invalid {
-  color: rgba(255, 255, 255, 0.7);
-}
- 
-.formulario-contacto select option {
-  background: #ffffff;
-  color: var(--texto);
-}
- 
-.formulario-contacto input:focus,
-.formulario-contacto select:focus,
-.formulario-contacto textarea:focus {
-  border-color: #ffffff;
-  outline: 3px solid rgba(255, 255, 255, 0.25);
-}
- 
-.formulario-contacto textarea {
+textarea {
   min-height: 100px;
   resize: vertical;
 }
  
 .check {
-  grid-column: 1 / -1;
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
-  line-height: 1.4;
-  cursor: pointer;
 }
  
 .check input {
-  flex: 0 0 auto;
   width: 20px;
   height: 20px;
-  margin: 0;
-  accent-color: #4F7DB8;
 }
  
-.btn--cotizar {
-  grid-column: 1 / -1;
-  width: 100%;
-  margin-top: 6px;
+.btn-cotizar {
   padding: 15px;
+  border: 0;
   border-radius: 4px;
-  background: #ffffff;
+  background: #fff;
   color: var(--texto);
+  font: inherit;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-decoration: underline;
   text-transform: uppercase;
+  cursor: pointer;
 }
  
-.btn--cotizar:hover {
-  background: #e8eef9;
-}
- 
-/* ---------- 8. PIE DE PÁGINA ---------- */
+/* 8. PIE DE PÁGINA: nombre, correo y derechos */
 footer {
   padding: 30px 20px;
-  background: var(--azul-pie);
-  color: #ffffff;
+  background: #081F5C;
+  color: #fff;
   text-align: center;
 }
  
-footer h3 {
-  margin: 0 0 10px;
-  color: #ffffff;
-}
- 
-footer p {
-  margin: 8px;
-}
- 
+footer h3,
 footer a {
-  color: #ffffff;
+  color: #fff;
 }
  
-/* ---------- 9. RESPONSIVE ---------- */
+/* 9. CELULAR: menú de tres rayas y una columna */
  
-/* Menú de celular */
 @media (max-width: 820px) {
   .header-inner {
     height: 74px;
@@ -490,7 +328,7 @@ footer a {
   }
  
   .nav-toggle {
-    display: flex;
+    display: block;
   }
  
   .main-nav {
@@ -498,34 +336,19 @@ footer a {
     top: 74px;
     right: 0;
     left: 0;
-    max-height: 0;
-    overflow: hidden;
-    border-bottom: 1px solid var(--borde);
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(15, 63, 168, 0.08);
-    transition: max-height 0.3s ease;
+    display: none;
+    background: #fff;
+    box-shadow: 0 8px 10px rgba(13, 56, 150, 0.12);
   }
  
   .main-nav.open {
-    max-height: 420px;
+    display: block;
   }
  
   .main-nav ul {
     flex-direction: column;
     align-items: stretch;
-    gap: 4px;
     padding: 12px 20px 20px;
-  }
- 
-  .nav-link {
-    padding: 14px;
-  }
- 
-  .nav-link.active::after {
-    right: auto;
-    bottom: 6px;
-    left: 14px;
-    width: 36px;
   }
  
   .nav-cta {
@@ -538,58 +361,19 @@ footer a {
   }
 }
  
-/* Tablets y celulares */
 @media (max-width: 768px) {
-  .contacto-banner {
-    padding: 40px 0;
+  .contacto-container {
+    grid-template-columns: 1fr;
   }
  
   .contacto-banner h1 {
     font-size: 1.8rem;
   }
- 
-  .contacto-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
- 
-  .contacto-datos,
-  .contacto-formulario {
-    padding: 18px;
-  }
 }
  
 @media (max-width: 600px) {
-  .section {
-    padding: 24px 0 52px;
-  }
- 
   .formulario-contacto {
     grid-template-columns: 1fr;
   }
 }
  
-@media (max-width: 480px) {
-  .tabla-contacto th,
-  .tabla-contacto td {
-    padding: 10px 8px;
-    font-size: 0.9rem;
-  }
- 
-  .tabla-contacto th {
-    width: 34%;
-  }
-}
- 
-@media (max-width: 400px) {
-  .logo img {
-    height: 48px;
-  }
-}
- 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
-}
