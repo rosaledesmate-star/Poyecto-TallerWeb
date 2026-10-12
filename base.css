@@ -56,7 +56,7 @@
   --shadow-hover: 0 8px 24px rgba(15, 63, 168, 0.16);
 
 
-  --header-h: 65px;
+  --header-h: 85px;
   --max-w: 1160px;
 
   /* Tipografía */
@@ -278,6 +278,7 @@ p {
   align-items: center;
   gap: 8px;
   height: var(--header-h);
+  padding: 0 20px;
 }
 
 .logotipo {
@@ -289,7 +290,7 @@ p {
 
 .logotipo img {
   width: auto;
-  height: 42px;
+  height: 45px;
   object-fit: contain;
 }
 
@@ -424,60 +425,6 @@ p {
   object-position: center 35%;
 }
 
-
-/* ---------- TARJETAS ---------- */
-
-.tarjetas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.tarjeta {
-  padding: 28px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: #ffffff;
-  color: var(--color-text);
-  box-shadow: var(--shadow);
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.tarjeta:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.tarjeta .icono {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  margin-bottom: 16px;
-  border-radius: 12px;
-  background: var(--color-icon-bg);
-}
-
-.tarjeta .icono svg {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.tarjeta p {
-  margin: 0;
-  color: var(--color-muted);
-}
-
-.tarjeta p:empty {
-  display: none;
-}
-
-
 /* ----------  LLAMADA A LA ACCIÓN ---------- */
 
 .llamada-contacto {
@@ -579,7 +526,7 @@ p {
 
 @media (max-width: 820px) {
   :root {
-    --header-h: 58px;
+    --header-h: 130px;
   }
 
   .boton-menu {
