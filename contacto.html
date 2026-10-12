@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="contacto.css">
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+ 
+  <title>Cotización y contacto | TRANSPORTE PROA</title>
+  <meta name="description" content="Contacta con TRANSPORTE PROA para consultar nuestros servicios de transporte de carga.">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contacto.css">
 </head>
  
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
  
   <!-- ENCABEZADO -->
-  <header class="header">
-    <div class="menu">
+  <header class="site-header">
+    <div class="container header-inner">
+ 
       <a class="logo" href="index.html" aria-label="TRANSPORTE PROA - Inicio">
         <img src="logo.svg" alt="Logotipo de TRANSPORTE PROA">
       </a>
-      <nav class="nav" aria-label="Navegación principal">
-        <ul class="barnav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="acerca_de.html">Acerca de</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+ 
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+ 
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="acerca_de.html">Acerca de</a></li>
+          <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
+          <li class="nav-cta">
+            <a class="btn btn--primary btn--sm" href="#cotizacion">Solicitar cotización</a>
+          </li>
         </ul>
       </nav>
+ 
     </div>
   </header>
  
@@ -32,9 +49,9 @@
  
     <!-- FRANJA AZUL A TODO EL ANCHO -->
     <section class="contacto-banner">
-      <div class="container section-title">
-        <h1>Contáctanos</h1>
-        <p>Estamos disponibles para atender tus consultas y coordinar los detalles de tu servicio de transporte con plataforma. Escríbenos para brindarte información sobre tu solicitud.</p>
+      <div class="container">
+        <h1>Solicita tu cotización</h1>
+        <p>Cuéntanos qué carga necesitas trasladar y coordinaremos los detalles de tu servicio de transporte con plataforma. Seguridad y puntualidad en cada destino.</p>
       </div>
     </section>
  
@@ -73,25 +90,85 @@
             </table>
           </section>
  
-          <!-- FORMULARIO -->
-          <section class="contacto-formulario">
-            <h2>Envíanos un mensaje</h2>
-            <p>Completa los siguientes campos para realizar tu consulta.</p>
+          <!-- FORMULARIO DE COTIZACIÓN -->
+          <section class="contacto-formulario" id="cotizacion">
+            <h2>Cotiza tu servicio</h2>
+            <p>Transporte Proa S.A.C.</p>
  
-            <form class="formulario-contacto" action="#" method="POST">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            <form class="formulario-contacto" id="form-cotizacion" action="#" method="POST">
  
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
+              <h3 class="grupo-titulo">Datos del cliente</h3>
  
-              <label for="asunto">Asunto</label>
-              <input type="text" id="asunto" name="asunto" required>
+              <div class="campo campo--full">
+                <label for="empresa">Empresa o razón social</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" autocomplete="organization">
+              </div>
  
-              <label for="mensaje">Tu mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              <div class="campo campo--full">
+                <label for="contacto">Nombre del contacto <span class="req">*</span></label>
+                <input type="text" id="contacto" name="contacto" placeholder="Ingresa tu nombre completo" autocomplete="name" required>
+              </div>
  
-              <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+              <div class="campo">
+                <label for="telefono">Teléfono <span class="req">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto" autocomplete="tel" inputmode="tel" required>
+              </div>
+ 
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="correo@empresa.com" autocomplete="email">
+              </div>
+ 
+              <h3 class="grupo-titulo">Detalles del servicio</h3>
+ 
+              <div class="campo campo--full">
+                <label for="recojo">Punto de recojo <span class="req">*</span></label>
+                <input type="text" id="recojo" name="recojo" placeholder="Ciudad, dirección o lugar de recojo" required>
+              </div>
+ 
+              <div class="campo campo--full">
+                <label for="destino">Punto de destino <span class="req">*</span></label>
+                <input type="text" id="destino" name="destino" placeholder="Ciudad, dirección o lugar de destino" required>
+              </div>
+ 
+              <div class="campo campo--full">
+                <label for="carga">Tipo de carga <span class="req">*</span></label>
+                <select id="carga" name="carga" required>
+                  <option value="" selected disabled>Selecciona el tipo de carga</option>
+                  <option>Acero y hierro</option>
+                  <option>Materiales de construcción</option>
+                  <option>Materias primas</option>
+                  <option>Chatarra</option>
+                  <option>Otros productos y materiales</option>
+                </select>
+              </div>
+ 
+              <div class="campo">
+                <label for="peso">Peso aproximado</label>
+                <input type="text" id="peso" name="peso" placeholder="Ej. 20 toneladas">
+              </div>
+ 
+              <div class="campo">
+                <label for="fecha">Fecha del servicio</label>
+                <input type="date" id="fecha" name="fecha">
+              </div>
+ 
+              <div class="campo campo--full">
+                <label for="detalles">Detalles adicionales</label>
+                <textarea id="detalles" name="detalles" rows="4" placeholder="Describe la mercancía, cantidad, dimensiones, requisitos especiales u otra información"></textarea>
+              </div>
+ 
+              <label class="check">
+                <input type="checkbox" name="acepto" required>
+                <span>Acepto que Transporte Proa S.A.C. use mis datos para responder a mi solicitud de cotización.</span>
+              </label>
+ 
+              <label class="check">
+                <input type="checkbox" name="info">
+                <span>Acepto recibir información de la empresa.</span>
+              </label>
+ 
+              <button class="btn btn--cotizar" type="submit">Cotizar ahora</button>
             </form>
           </section>
  
@@ -107,5 +184,55 @@
     <p><a href="mailto:trans_proa@hotmail.com">trans_proa@hotmail.com</a></p>
     <p>&copy; 2026 Transporte Proa S.A.C. Todos los derechos reservados.</p>
   </footer>
+ 
+  <script>
+    /* Menú móvil */
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.getElementById("main-nav");
+    if (toggle && nav) {
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("open")) {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Abrir menú");
+          toggle.focus();
+        }
+      });
+    }
+ 
+    /* Envía la cotización al correo de la empresa (abre el programa de correo del cliente) */
+    var formCot = document.getElementById("form-cotizacion");
+    if (formCot) {
+      formCot.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var d = new FormData(formCot);
+        var lineas = [
+          "SOLICITUD DE COTIZACIÓN",
+          "",
+          "DATOS DEL CLIENTE",
+          "Empresa: " + (d.get("empresa") || "-"),
+          "Contacto: " + d.get("contacto"),
+          "Teléfono: " + d.get("telefono"),
+          "Correo: " + (d.get("correo") || "-"),
+          "",
+          "DETALLES DEL SERVICIO",
+          "Punto de recojo: " + d.get("recojo"),
+          "Punto de destino: " + d.get("destino"),
+          "Tipo de carga: " + d.get("carga"),
+          "Peso aproximado: " + (d.get("peso") || "-"),
+          "Fecha del servicio: " + (d.get("fecha") || "-"),
+          "Detalles adicionales: " + (d.get("detalles") || "-")
+        ];
+        var asunto = "Solicitud de cotización - " + (d.get("empresa") || d.get("contacto"));
+        window.location.href = "mailto:trans_proa@hotmail.com?subject=" +
+          encodeURIComponent(asunto) + "&body=" + encodeURIComponent(lineas.join("\n"));
+      });
+    }
+  </script>
 </body>
 </html>
