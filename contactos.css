@@ -1,75 +1,49 @@
-/* ==============================
-   ESTILOS DE LA PÁGINA CONTACTO
-============================== */
+/* 1. ENLACES INTERNOS: el encabezado no los tapa */
+#datos,
+#cotizacion {
+  scroll-margin-top: 100px;
+}
 
-/* Banner azul superior */
+/* 2. BANNER AZUL: título y descripción */
 .contacto-banner {
-  width: 100%;
   padding: 55px 0;
-  background-color: #0D3896;
-  box-sizing: border-box;
+  background: var(--color-primary);
+  color: #fff;
 }
 
-.contacto-banner .section-title {
-  margin: 0;
-  padding: 0 20px;
-  background: transparent;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.contacto-banner .section-title h1 {
+.contacto-banner h1 {
   margin: 0 0 14px;
-  color: #ffffff;
+  color: #fff;
   font-size: 2.2rem;
 }
 
-.contacto-banner .section-title p {
+.contacto-banner p {
   max-width: 750px;
   margin: 0;
-  color: #ffffff;
-  line-height: 1.8;
 }
 
-/* Contenido y tarjetas de contacto */
-#contenido > .section {
+/* 3. TARJETAS: datos a la izquierda, formulario a la derecha */
+.contacto-contenido {
   padding-top: 32px;
 }
 
-.contacto-container {
+.contacto-columnas {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
   gap: 32px;
   align-items: start;
-  margin-top: 0;
 }
 
 .contacto-datos,
 .contacto-formulario {
-  min-width: 0;
-  padding: 24px;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  padding: 28px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(13, 56, 150, 0.06);
+  box-shadow: var(--shadow);
 }
 
-.contacto-datos h2,
-.contacto-formulario h2 {
-  margin-bottom: 12px;
-  color: #0D3896;
-}
-
-.contacto-formulario > p {
-  margin-bottom: 16px;
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-/* Tabla de datos de contacto */
+/* 4. TABLA: datos de contacto de la empresa */
 .tabla-contacto {
   width: 100%;
-  margin-top: 16px;
   border-collapse: collapse;
   overflow-wrap: anywhere;
 }
@@ -77,110 +51,138 @@
 .tabla-contacto th,
 .tabla-contacto td {
   padding: 14px 12px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--color-border);
   text-align: left;
   vertical-align: top;
-  line-height: 1.6;
 }
 
 .tabla-contacto th {
   width: 36%;
-  color: #0D3896;
-  font-weight: 600;
+  color: var(--color-primary);
 }
 
-.tabla-contacto td {
-  color: #374151;
+/* 5. FORMULARIO: tarjeta azul oscura */
+.contacto-formulario {
+  background: #0F2B6E;
+  color: #fff;
 }
 
-.tabla-contacto tr:last-child th,
-.tabla-contacto tr:last-child td {
-  border-bottom: none;
+.contacto-formulario h2 {
+  margin-bottom: 6px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.tabla-contacto a {
-  color: #0D3896;
-  overflow-wrap: anywhere;
+.contacto-formulario > p {
+  margin-bottom: 22px;
+  text-align: center;
 }
 
-/* Formulario de contacto */
 .formulario-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grupo-titulo {
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.campo {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 16px;
+  gap: 6px;
+  min-width: 0;
 }
 
-.formulario-contacto label {
-  margin: 14px 0 6px;
-  color: #374151;
-  font-size: 0.95rem;
+.campo label {
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
-.formulario-contacto input,
+.campo-completo,
+.casilla,
+.boton-cotizar {
+  grid-column: 1 / -1;
+}
+
+.obligatorio {
+  color: #9CC3FF;
+}
+
+/* 6. CAMPOS: cajas translúcidas, casillas y botón blanco */
+.formulario-contacto input:not([type="checkbox"]),
+.formulario-contacto select,
 .formulario-contacto textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #cbd5e1;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 6px;
-  background-color: #ffffff;
-  color: #1f2937;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
   font: inherit;
-  box-sizing: border-box;
+  color-scheme: dark;
 }
 
 .formulario-contacto input:focus,
+.formulario-contacto select:focus,
 .formulario-contacto textarea:focus {
-  border-color: #0D3896;
-  outline: 3px solid rgba(13, 56, 150, 0.12);
+  outline: 2px solid #fff;
+}
+
+.formulario-contacto ::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .formulario-contacto textarea {
-  min-height: 130px;
+  min-height: 100px;
   resize: vertical;
 }
 
-.formulario-contacto button {
-  align-self: flex-start;
-  margin-top: 20px;
+.casilla {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.casilla input {
+  width: 20px;
+  height: 20px;
+}
+
+.boton-cotizar {
+  padding: 15px;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-/* Diseño adaptable para tablets y celulares */
+/* 7. CELULAR: una sola columna */
 @media (max-width: 768px) {
-  .contacto-banner {
-    padding: 40px 0;
-  }
-
-  .contacto-banner .section-title h1 {
-    font-size: 1.8rem;
-  }
-
-  .contacto-container {
+  .contacto-columnas {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .contacto-datos,
-  .contacto-formulario {
-    padding: 18px;
+  .contacto-banner h1 {
+    font-size: 1.8rem;
   }
 }
 
-/* Ajustes para celulares pequeños */
-@media (max-width: 480px) {
-  .tabla-contacto th,
-  .tabla-contacto td {
-    padding: 10px 8px;
-    font-size: 0.9rem;
-  }
-
-  .tabla-contacto th {
-    width: 34%;
-  }
-
-  .formulario-contacto button {
-    width: 100%;
+@media (max-width: 600px) {
+  .formulario-contacto {
+    grid-template-columns: 1fr;
   }
 }
