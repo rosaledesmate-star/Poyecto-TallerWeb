@@ -1,120 +1,468 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="inicio.css"/>
-    <title> Transporte Proa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>TRANSPORTE PROA </title>
+
+  <meta name="description" content="Transporte PROA S.A.C. ofrece servicios de transporte terrestre de carga con plataforma, priorizando la seguridad, eficiencia y puntualidad.">
+
+  <!--  estilo  -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="inicio.css">
 </head>
-<!-- encabezado de la pagina web -->
+
 <body>
-  <header class="header">
-       <div class="menu">
-          <a href="#logo" class="logo"></a>
-          <h1> Transporte Proa</h1>
-         
-           <nav class="nav">
-              <ul class="barnav">
-                 <li><a href="index.html">Inicio</a></li>
-                 <li><a href="acerca_de.html">Acerca de</a></li>
-                 <li><a href="servicios.html">Servicios</a></li>
-                  <li><a href="contacto.html">Contacto</a></li>
-              </ul>
-            
-           </nav>
-       </div>
+
+  <!-- Enlace para saltar al contenido principal -->
+  <a class="enlace-saltar-contenido" href="#contenido">
+    Saltar al contenido
+  </a>
+
+  <!-- Encabezado principal -->
+  <header class="encabezado-sitio">
+    <div class="contenedor encabezado-interior">
+
+      <!-- Logotipo -->
+      <a class="logotipo"
+         href="index.html"
+         aria-label="Transporte PROA- Inicio">
+        <img
+          src="logo.svg"
+          alt="Logotipo de Transporte PROA"
+          width="403"
+          height="300">
+      </a>
+
+      <!-- Botón del menú móvil -->
+      <button
+        class="boton-menu"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="navegacion-principal">
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegación principal -->
+      <nav
+        class="navegacion-principal"
+        id="navegacion-principal"
+        aria-label="Navegación principal">
+
+        <ul>
+          <li>
+            <a
+              class="enlace-navegacion activo"
+              href="index.html"
+              aria-current="page">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="enlace-navegacion"
+              href="acerca_de.html">
+              Acerca de
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="enlace-navegacion"
+              href="servicios.html">
+              Servicios
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="enlace-navegacion"
+              href="contacto.html">
+              Contacto
+            </a>
+          </li>
+
+          <li class="navegacion-destacada">
+            <a
+              class="boton boton-principal boton-pequeno"
+              href="contacto.html#datos">
+              Solicitar cotización
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
-    <!-- Banner --->
-   <section class="banner">
-      <div class="banner-content">
 
-          <h2>SERVICIOS DE TRANSPORTE DE CARGA </h2>
-           <h1>Logística Segura para Cada Destino</h1>
-           <p class="text-banner">Somos aliados estratégicos para el traslado de carga general,
-  ofreciendo un servicio confiable, seguro y eficiente en rutas
-  nacionales.
-           </p>
-        
-            <div class="boton">
-               <a href="servicios.html">CONOCE NUESTROS SERVICIOS</a>
-               <a href="contacto.html">CONTÁCTANOS</a>
-           </div>
+  <!-- Contenido principal -->
+  <main id="contenido">
+
+    <!-- Portada principal -->
+    <section
+      class="portada-principal"
+      aria-labelledby="titulo-portada">
+
+      <div class="contenedor">
+
+        <p class="portada-descripcion">
+          Servicios de transporte de carga
+        </p>
+
+        <h1 id="titulo-portada">
+          Logística segura para cada destino
+        </h1>
+
+        <p class="texto-destacado">
+          Somos una empresa dedicada al transporte de carga con
+          plataforma, comprometida con brindar un servicio seguro,
+          responsable y puntual para nuestros clientes.
+        </p>
+
+        <div class="acciones-portada">
+
+          <a class="boton boton-claro" href="servicios.html">
+            Conocer nuestros servicios
+          </a>
+
+          <a class="boton boton-contorno" href="contacto.html">
+            Contáctanos
+          </a>
+
+        </div>
       </div>
-   </section> <br>
-   <!---indroduccion a la informacion de la empresa--->
+    </section>
 
-<section class="article">
-    <h2 class="title_article">
-        Servicios de Transporte de Carga Terrestre
-    </h2>
-    <p class="text-article" >
-        Nuestra empresa de transporte y distribución brinda soluciones 
-        para el traslado de carga general, atendiendo las necesidades de 
-        empresas que requieren un servicio seguro, eficiente y puntual. 
-        Contamos con experiencia en el transporte de productos siderúrgicos,
-        materias primas, chatarra, cemento y otros tipos de carga, adaptándonos 
-        a las características y requerimientos de cada servicio. Nuestro compromiso 
-        es ofrecer un servicio confiable, trabajando con responsabilidad y
-        priorizando la seguridad, el cumplimiento y la satisfacción de nuestros clientes. <br></br>
-     <a href="indice.html">Leer más</a>
-</section> <br>
-    <!-- VALORES DE LA EMPRESA -->
-<section class="valores">
-    <h2> Nuestros Valores </h2> <br><br>
-    <div class="tabla-valores">
-    <table>
-        <tr>
-            <td>
-                <h3>COMPROMISO</h3>
-                <P>Texto</P>
-            </td>
-      </tr>
-  </table>
-  <table>
-      <tr>
-          <td>
-                <h3>SEGURIDAD</h3>
-                 <P>Texto</P>
-            </td>
-      </tr>
-  </table>
-    <table>
-        <tr></tr>
-            <td> <h3>EFICIENCIA</h3>
-                 <P>Texto</P>
-            </td>
-        </tr>
-        
-    </table>
-</div>
-</section> <br>
-<!--INTRODUCCION A LOS SERVICIOS -->
-<section class="servicio-destacado">
-    <h2> Nuestros Servicios</h2>
-    <p> Brindamos soluciones de transporte terrestre para carga pesada,
-        carga general, productos siderúrgicos y chatarra. 
-    </p>
-    <a href="servicios.html" class="boton1">Ver Servicios</a>
-</section>
+    <!-- Presentación de la empresa -->
+    <section class="seccion">
+      <div class="contenedor presentacion-empresa">
 
-<!-- ZONAS QUE REALIZA EL TRANSPORTE -->
-<section class="cobertura">
-    <h2>Nuestra Cobertura</h2>
-     <p>
-        Atendemos rutas en: <br>
-         -Lima <br>
-         -Cañete <br>
-         -Chincha <br>
-         -Pisco <br>
-         -Ica <br>
-        brindando soluciones de transporte de carga.
-     </p>
-</section>
-<!-- PARTE FINAL DE LA PAGINA-->
-<footer >
-    <h3> TRANSPORTE PROA S.A.C</h3>
-    <P>Transporte de carga con plataforma</P>
+        <div class="texto-presentacion">
 
-    <p>&copy; 2026 Transporte Proa S.A.C. Todos los derechos reservados.</p>
-</footer>
+          <h2>Comprometidos con cada destino</h2>
+
+          <p>
+            En TRANSPORTE PROA trabajamos con compromiso y
+            responsabilidad para brindar soluciones de transporte
+            de carga con plataforma. Nuestra experiencia nos permite
+            atender las necesidades de nuestros clientes, priorizando
+            la seguridad, la puntualidad y el cumplimiento de cada
+            servicio.
+          </p>
+
+          <a class="boton boton-oscuro" href="acerca_de.html">
+            Conocer la empresa
+          </a>
+
+        </div>
+
+        <div class="imagen-presentacion">
+
+          <img
+            src="acerca.png"
+            alt="Transporte de carga de Transporte PROA"
+            loading="lazy">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores de la empresa -->
+    <section class="seccion seccion-alternativa">
+      <div class="contenedor">
+
+        <div class="titulo-seccion">
+          <h2>Nuestros valores</h2>
+        </div>
+
+        <div class="tarjetas-valores">
+
+          <!-- Compromiso -->
+          <article class="tarjeta-valor">
+
+            <div class="icono-valor">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path d="M4 12l4-4 4 3 4-3 4 4-8 8z"/>
+                <path d="M8 8l-4 4"/>
+              </svg>
+            </div>
+
+            <h3>Compromiso</h3>
+
+            <p>
+              Orientación al cumplimiento de las necesidades
+              de cada cliente.
+            </p>
+
+          </article>
+
+          <!-- Seguridad -->
+          <article class="tarjeta-valor">
+
+            <div class="icono-valor">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+
+            <h3>Seguridad</h3>
+
+            <p>
+              Compromiso con el cuidado de la carga durante
+              la prestación de cada servicio.
+            </p>
+
+          </article>
+
+          <!-- Eficiencia -->
+          <article class="tarjeta-valor">
+
+            <div class="icono-valor">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+
+            <h3>Eficiencia</h3>
+
+            <p>
+              Atención puntual y organizada de los horarios
+              y compromisos acordados.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios de transporte -->
+    <section class="seccion">
+      <div class="contenedor">
+
+        <h2>Nuestros servicios</h2>
+
+        <p>
+          Ofrecemos servicios de transporte de carga con plataforma, orientados al traslado de materiales y mercancías 
+          compatibles con las características de nuestras unidades.
+        </p>
+
+        <a class="boton boton-oscuro" href="servicios.html">
+          Ver servicios
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Cobertura geográfica -->
+    <section
+      class="seccion seccion-alternativa"
+      aria-labelledby="titulo-cobertura">
+
+      <div class="contenedor cobertura-servicios">
+
+        <div>
+
+          <h2 id="titulo-cobertura">
+            Nuestra cobertura
+          </h2>
+
+          <p>
+            Atendemos rutas en Lima, Cañete, Chincha, Pisco e Ica,
+            brindando soluciones de transporte de carga.
+          </p>
+
+          <a class="boton boton-oscuro" href="contacto.html">
+            Consultar una ruta
+          </a>
+
+        </div>
+
+        <div>
+
+          <div class="grupo-rutas">
+
+            <p class="titulo-rutas">
+              Rutas de atención
+            </p>
+
+            <ul class="lista-rutas">
+              <li class="ruta-principal">Lima</li>
+              <li>Cañete</li>
+              <li>Chincha</li>
+              <li>Pisco</li>
+              <li>Ica</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Invitación a contactar -->
+    <section class="llamada-contacto">
+      <div class="contenedor">
+
+        <h2>¿Necesitas transportar tu carga?</h2>
+
+        <p>
+          Contáctanos para consultar sobre nuestro servicio.
+        </p>
+
+        <a class="boton boton-claro" href="contacto.html">
+          cotizar servicio
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie-sitio">
+    <div class="contenedor columnas-pie">
+
+      <!-- Información de la empresa -->
+      <div>
+
+        <a class="logotipo-pie" href="index.html">
+
+          <img
+            src="logo.svg"
+            alt="Logotipo de Transporte PROA "
+            width="403"
+            height="300"
+            loading="lazy">
+
+        </a>
+
+        <p>Seguridad y puntualidad en cada destino.</p>
+
+      </div>
+
+      <!-- Enlaces de navegación -->
+      <div>
+
+        <h3>Navegación</h3>
+
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acerca_de.html">Acerca de</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Datos de contacto -->
+      <div>
+
+        <h3>Contacto</h3>
+
+        <ul>
+          <li>
+            <a href="mailto:trans_proa@hotmail.com">
+              trans_proa@hotmail.com
+            </a>
+          </li>
+
+          <li>
+            Lunes a sábado, de 8:00 a. m. a 6:00 p. m.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Derechos reservados -->
+    <div class="pie-inferior">
+      <div class="contenedor">
+
+        &copy;
+        <span data-anio>2026</span>
+        TRANSPORTE PROA S.A.C. Todos los derechos reservados.
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Funcionalidad del menú móvil -->
+  <script>
+    const botonMenu = document.querySelector(".boton-menu");
+    const navegacion = document.getElementById("navegacion-principal");
+
+    if (botonMenu && navegacion) {
+
+      // Abrir y cerrar el menú
+      botonMenu.addEventListener("click", function () {
+
+        const estaAbierto = navegacion.classList.toggle("abierto");
+
+        botonMenu.setAttribute(
+          "aria-expanded",
+          String(estaAbierto)
+        );
+
+        botonMenu.setAttribute(
+          "aria-label",
+          estaAbierto ? "Cerrar menú" : "Abrir menú"
+        );
+
+      });
+
+      // Cerrar el menú al seleccionar un enlace
+      navegacion.querySelectorAll("a").forEach(function (enlace) {
+
+        enlace.addEventListener("click", function () {
+
+          navegacion.classList.remove("abierto");
+
+          botonMenu.setAttribute("aria-expanded", "false");
+          botonMenu.setAttribute("aria-label", "Abrir menú");
+
+        });
+
+      });
+
+    }
+
+
+  </script>
+
 </body>
 </html>

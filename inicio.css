@@ -1,183 +1,217 @@
 
-body {
-    margin: 0;
-    width:100% ;
-    font-family: Arial, sans-serif;
-}
-.header {
-    background-color: #1f3d5a;
-    color:white;
-    padding: 5px 15px;
-}
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.menu h1 {
-    margin: 0;
+
+/* ---------- Portada principal ---------- */
+
+.portada-principal {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  align-items: center;
+  background: url("banner.png") center / cover no-repeat;
+  color: #fff;
 }
 
-.barnav {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.barnav a {
-    color: white;
-    text-decoration: none;
+.portada-principal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--hero-o1) 0%,
+    var(--hero-o2) 60%,
+    var(--hero-o3) 100%
+  );
 }
 
-.barnav a:hover {
-    text-decoration: underline;
+.portada-principal .contenedor {
+  position: relative;
 }
-.banner {
-    position: relative;
+
+.portada-principal h1 {
+  color: #fff;
+  margin-bottom: 0.3em;
+}
+
+.texto-destacado {
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-weight: 600;
+  color: var(--color-accent-soft);
+  margin-bottom: 1em;
+}
+
+.portada-principal p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 1.8em;
+  color: #eef2f7;
+}
+
+.acciones-portada {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* ---------- Presentación de la empresa ---------- */
+
+.presentacion-empresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.texto-presentacion p {
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.imagen-presentacion img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+/* ---------- Valores de la empresa ---------- */
+
+.tarjetas-valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tarjeta-valor {
+  padding: 28px 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-valor:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.icono-valor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height:65px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--color-icon-bg);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icono-valor svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.tarjeta-valor h3 {
+  color: var(--color-heading);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.tarjeta-valor p {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* ---------- Cobertura ---------- */
+
+.cobertura-servicios {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.lista-rutas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lista-rutas li {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-steel);
+  color: var(--color-heading);
+  box-shadow: var(--shadow);
+}
+
+.lista-rutas li.ruta-principal {
+  background: var(--color-icon-bg);
+  border-color: var(--color-icon-bg);
+  color: #fff;
+}
+
+.titulo-rutas {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 10px;
+}
+
+.grupo-rutas + .grupo-rutas {
+  margin-top: 22px;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .presentacion-empresa {
+    grid-template-columns: 1fr;
+  }
+
+  .imagen-presentacion img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .acciones-portada .boton {
     width: 100%;
-    min-height: 500px;
-
-    background-image: url("imagenbanner.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-   display: flex;
-   align-items: center;
+    text-align: center;
+  }
 }
-.banner-content {
-    position: relative;
-    width: 40%;
-    max-width: 600px;
-    margin-left: 7%;
-    padding: 40px 10px 70px;
-    
-}
-.banner-content h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    color:#1F3D5A
-}
-.banner-content h1 {
-    font-size: 40px;
-    line-height: 1.1;
-    margin: 0 0 20px 0;
-    color:white;
-    font-weight: 700;
-}
-.text-banner {
-    font-size: 16px;
-    line-height: 1.5;
-    max-width: 500px ;
-    margin-bottom: 25px;
-    color: white;
-    
-}
-.boton {
-    display: flex;
-    gap:15px;
-}
-.boton a {
-    background-color: #1F3D5A;
-    color:white;
-    padding: 14px 22px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
-.boton a:hover {
-    background-color: #163047;
-}
-.article {
-    background-color: white;
-    min-height: 400px;
-    padding: 50px;
-}
-.title_article {
-    color: #1f3d5a;
-}
-.text-article {
-    color: black;
-     font-size: 16px;
-    line-height: 1.5;
-    max-width: 400px ;
-    margin-bottom: 25px;
-
-}
-.text-article a {
-    background-color: #1F3D5A;
-    color:white;
-    padding: 14px 22px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-
-}
-.valores {
-    background-color: black ;
-    color: white;
-    min-height: 400px;
-    padding: 50px;
-
-}
-    
-.tabla-valores {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media (max-width: 768px) {
+  .tarjetas-valores {
+    grid-template-columns: 1fr;
     gap: 20px;
-}
-.tabla-valores table {
- background-color: white;
-    color:black;
-    width: 30%;
-    border-collapse: collapse;
-}
-.tabla-valores td {
-    padding: 25px;
-    text-align: center;
-}
-.servicio-destacado{
-    background-color: white;
-    min-height: 400px;
-    color: #1F3D5A;
-    padding: 50px;
-}
-.servicio-destacado a{
-    background-color: #1F3D5A;
-    color:white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    font-size: 14px;
-    display: inline-block;
+  }
+
+  .tarjeta-valor {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
-.cobertura {
-    background-color: black ;
-    min-height: 400px;
-    color: white;
-    padding: 50px;
-    
-}
-footer {
-    background-color: #1f3d5a;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-footer h3 {
-    margin: 0 0 10px;
-}
-footer p {
-    margin: 8px ;
-}
-footer a:last-child {
-  margin-top:25px;
-  border: 1px solid white;
-  padding: 10px ;
-
+@media (max-width: 900px) {
+  .cobertura-servicios {
+    grid-template-columns: 1fr;
+  }
 }
