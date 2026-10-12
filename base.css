@@ -500,7 +500,7 @@ p {
 /* ----------  PIE DE PÁGINA ---------- */
 
 .pie-sitio {
-  padding: 56px 0 0;
+  padding: 30px 0 0;
   background: var(--color-footer-bg);
   color: #cbd5e1;
 }
@@ -509,8 +509,8 @@ p {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.2fr;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 40px;
+  gap: 28px;
+  padding-bottom: 24px;
 }
 
 .logotipo-pie {
@@ -520,19 +520,19 @@ p {
 .logotipo-pie img {
   width: auto;
   max-width: 100%;
-  height: 84px;
-  margin-bottom: 14px;
+  height: 65px;
+  margin-bottom: 8px;
 }
 
 .pie-sitio h3 {
   margin-bottom: 0.9em;
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .pie-sitio ul {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -550,9 +550,9 @@ p {
 }
 
 .pie-inferior {
-  padding: 18px 0;
+  padding: 12px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
