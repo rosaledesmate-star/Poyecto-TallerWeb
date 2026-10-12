@@ -1,224 +1,188 @@
-/* 1. BASE: colores, fuente y ancho de la página */
-:root {
-  --azul: #0D3896;
-  --texto: #1B2333;
-}
- 
-* {
-  box-sizing: border-box;
-}
- 
-html {
-  color-scheme: light;
-  scroll-behavior: smooth;
-}
- 
-body {
-  margin: 0;
-  font-family: "Montserrat", "Segoe UI", sans-serif;
-  color: var(--texto);
-  line-height: 1.65;
-}
- 
-img {
-  display: block;
-  max-width: 100%;
-}
- 
-a {
-  color: var(--azul);
-}
- 
-h1,
-h2,
-h3 {
-  margin: 0 0 0.6em;
-  color: var(--azul);
-  line-height: 1.2;
-}
- 
-p {
-  margin: 0 0 1em;
-}
- 
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
- 
-.section {
-  padding: 32px 0 72px;
-}
- 
+/* 1. ENLACES INTERNOS: el encabezado no los tapa */
 #datos,
 #cotizacion {
   scroll-margin-top: 100px;
 }
- 
-/* 2. ENCABEZADO: logo, menú y botón */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  background: #fff;
-  border-bottom: 1px solid #DCE3EE;
-  box-shadow: 0 2px 10px rgba(15, 63, 168, 0.08);
-}
- 
-.header-inner {
-  display: flex;
-  align-items: center;
-  height: 84px;
-}
- 
-.logo {
-  margin-right: auto;
-}
- 
-.logo img {
-  width: auto;
-  height: 66px;
-}
- 
-.main-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
- 
-.nav-link {
-  display: block;
-  padding: 10px 14px;
-  position: relative;
-  border-radius: 6px;
-  color: var(--azul);
-  font-weight: 600;
-  text-decoration: none;
-}
- 
-.nav-link:hover {
-  background: #F1F5FB;
-}
- 
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  right: 14px;
-  bottom: 4px;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background: #f7f5f1;
-}
- 
-.nav-cta {
-  margin-left: 8px;
-}
- 
-.btn {
-  display: inline-block;
-  padding: 9px 18px;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  background: var(--azul);
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-}
- 
-.btn:hover {
-  background: #082A70;
-}
- 
-.nav-toggle {
-  display: none;
-  padding: 8px 10px;
-  border: 2px solid var(--azul);
-  border-radius: 8px;
-  background: #fff;
-  cursor: pointer;
-}
- 
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 5px 0;
-  background: var(--azul);
-}
- 
-/* 3. BANNER AZUL: título y descripción */
+
+/* 2. BANNER AZUL: título y descripción */
 .contacto-banner {
   padding: 55px 0;
-  background: var(--azul);
+  background: var(--color-primary);
   color: #fff;
 }
- 
+
 .contacto-banner h1 {
   margin: 0 0 14px;
   color: #fff;
   font-size: 2.2rem;
 }
- 
+
 .contacto-banner p {
   max-width: 750px;
   margin: 0;
 }
- 
-/* 4. TARJETAS: datos a la izquierda, formulario a la derecha */
-.contacto-container {
+
+/* 3. TARJETAS: datos a la izquierda, formulario a la derecha */
+.contacto-contenido {
+  padding-top: 32px;
+}
+
+.contacto-columnas {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
   gap: 32px;
   align-items: start;
 }
- 
+
 .contacto-datos,
 .contacto-formulario {
   padding: 28px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(13, 56, 150, 0.1);
+  box-shadow: var(--shadow);
 }
- 
-/* 5. TABLA: datos de contacto de la empresa */
+
+/* 4. TABLA: datos de contacto de la empresa */
 .tabla-contacto {
   width: 100%;
   border-collapse: collapse;
   overflow-wrap: anywhere;
 }
- 
+
 .tabla-contacto th,
 .tabla-contacto td {
   padding: 14px 12px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--color-border);
   text-align: left;
   vertical-align: top;
 }
- 
+
 .tabla-contacto th {
   width: 36%;
-  color: var(--azul);
+  color: var(--color-primary);
 }
- 
-/* 6. FORMULARIO: tarjeta oscura con foto de fondo */
+
+/* 5. FORMULARIO: tarjeta azul oscura */
 .contacto-formulario {
-  background: linear-gradient(rgba(8, 31, 92, 0.9), rgba(6, 28, 84, 0.93)), url("imagenbanner.jpeg") center / cover;
+  background: #0F2B6E;
   color: #fff;
 }
- 
+
 .contacto-formulario h2 {
   margin-bottom: 6px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
- 
+
 .contacto-formulario > p {
   margin-bottom: 22px;
   text-align: center;
+}
+
+.formulario-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grupo-titulo {
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.campo-completo,
+.casilla,
+.boton-cotizar {
+  grid-column: 1 / -1;
+}
+
+.obligatorio {
+  color: #9CC3FF;
+}
+
+/* 6. CAMPOS: cajas translúcidas, casillas y botón blanco */
+.formulario-contacto input:not([type="checkbox"]),
+.formulario-contacto select,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font: inherit;
+  color-scheme: dark;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+  outline: 2px solid #fff;
+}
+
+.formulario-contacto ::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.formulario-contacto textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.casilla {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.casilla input {
+  width: 20px;
+  height: 20px;
+}
+
+.boton-cotizar {
+  padding: 15px;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* 7. CELULAR: una sola columna */
+@media (max-width: 768px) {
+  .contacto-columnas {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-banner h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .formulario-contacto {
+    grid-template-columns: 1fr;
+  }
 }
