@@ -1,24 +1,25 @@
-/* Cada var(--color-..., valor) trae un color de respaldo: si comun.css no define la variable, igual se ve bien */
-
-/* 1. BANNER AZUL: título y descripción */
+/*BANNER AZUL */
 .contacto-banner {
   padding: 56px 0 64px;
   background: var(--color-primary, #0d3a99);
   color: #fff;
 }
 
+/*CONTENEDOR DEL BANNER Y DEL CONTENIDO DE CONTACTO*/
 .contacto-banner .contenedor,
 .contacto-contenido .contenedor {
   width: min(1100px, calc(100% - 48px));
   margin-inline: auto;
 }
 
+/*H1 DEL BANNER DE CONTACTO*/
 .contacto-banner h1 {
   margin: 0 0 18px;
   color: #fff;
   font-size: 2.2rem;
 }
 
+/*PÁRRAFO Y ENLACE*/
 .contacto-banner p {
   max-width: 560px;
   margin: 0;
@@ -27,12 +28,13 @@
   line-height: 1.8;
 }
 
-/* 2. TARJETAS: datos a la izquierda, formulario a la derecha */
+/*CONTENIDO DE CONTACTO: TARJETAS DE DATOS Y FORMULARIO*/
 .contacto-contenido {
   padding: 24px 0 56px;
   background: #fff;
 }
 
+/*COLUMNAS DE LAS TARJETAS DE CONTACTO*/
 .contacto-columnas {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -40,6 +42,7 @@
   align-items: start;
 }
 
+/* TARJETAS DE CONTACTO: DATOS Y FORMULARIO */
 .contacto-datos,
 .contacto-formulario {
   padding: 20px;
@@ -50,6 +53,7 @@
   color: var(--color-text, #2b2f3a);
 }
 
+/*H2 DE LAS TARJETAS DE CONTACTO*/
 .contacto-datos h2,
 .contacto-formulario h2 {
   margin: 0 0 14px;
@@ -57,12 +61,13 @@
   font-size: 1.4rem;
 }
 
+/*PÁRRAFO DE LA TARJETA DE CONTACTO*/
 .contacto-formulario > p {
   margin: 0 0 22px;
   font-size: 0.85rem;
 }
 
-/* 3. TABLA: datos de contacto de la empresa */
+/*TABLA: datos de contacto de la empresa */
 .tabla-contacto {
   width: 100%;
   border-collapse: collapse;
@@ -70,6 +75,7 @@
   font-size: 0.85rem;
 }
 
+/*FILAS DE LA TABLA DE CONTACTO*/
 .tabla-contacto th,
 .tabla-contacto td {
   padding: 14px 8px;
@@ -78,28 +84,32 @@
   vertical-align: top;
 }
 
+/*QUITAR EL BORDE INFERIOR DE LA ÚLTIMA FILA DE LA TABLA DE CONTACTO*/
 .tabla-contacto tr:last-child th,
 .tabla-contacto tr:last-child td {
   border-bottom: 0;
 }
 
+/*ANCHO DE LA COLUMNA DE LA TABLA DE CONTACTO*/
 .tabla-contacto th {
   width: 36%;
   color: var(--color-primary, #0d3a99);
 }
 
+/*ENLACES DE LA TABLA DE CONTACTO*/
 .tabla-contacto a {
   color: var(--color-primary, #0d3a99);
   text-decoration: underline;
 }
 
-/* 4. FORMULARIO */
+/* DISTRIBUCIÓN */
 .formulario-contacto {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/*CAMPO DEL FORMULARIO*/
 .campo {
   display: flex;
   flex-direction: column;
@@ -107,11 +117,13 @@
   min-width: 0;
 }
 
+/*ETIQUETAS DE LOS CAMPOS*/
 .campo label {
   font-size: 0.85rem;
   font-weight: 700;
 }
 
+/*CAMPOS DE ENTRADA*/
 .formulario-contacto input,
 .formulario-contacto textarea {
   width: 100%;
@@ -123,17 +135,20 @@
   font: inherit;
 }
 
+/*CAMPO DE TEXTO MULTILÍNEA*/
 .formulario-contacto textarea {
   min-height: 120px;
   resize: vertical;
 }
 
+/*CAMPO DE ENTRADA ENFOCADO*/
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
   outline: 2px solid var(--color-primary, #0d3a99);
   outline-offset: 1px;
 }
 
+/*BOTÓN DE ENVIAR*/
 .boton-enviar {
   align-self: flex-start;
   padding: 12px 20px;
@@ -146,6 +161,7 @@
   cursor: pointer;
 }
 
+/*BOTÓN DE ENVIAR*/
 .boton-enviar:hover {
   filter: brightness(1.15);
 }
@@ -162,16 +178,18 @@
   font-size: 0.85rem;
 }
 
+/* Mostrar el mensaje de estado del formulario cuando sea visible */
 .estado-formulario.visible {
   display: block;
 }
 
-/* 5. CELULAR: una sola columna */
+/* ADAPTACIÓN A CELULAR */
 @media (max-width: 768px) {
   .contacto-columnas {
     grid-template-columns: 1fr;
   }
 
+  /*TAMAÑO DEL H1 DEL BANNER DE CONTACTO*/
   .contacto-banner h1 {
     font-size: 1.8rem;
   }
