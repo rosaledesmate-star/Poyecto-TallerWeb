@@ -66,7 +66,7 @@ img {
 }
 
 main {
-    margin-top: 8.125rem;                /* 130px */
+        margin-top: 7rem;           /* 112px */
 }
 
 /* BANNER */
@@ -235,11 +235,81 @@ main {
     font-size: 0.875rem;
 }
 
+/* FOOTER */
+footer {
+    background-color: #081F5C;
+    color: #ffffff;
+    padding-top: 2.5rem;                 /* 40px */
+    line-height: normal;
+}
+
+.contenedorfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 75rem;                    /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.25rem;                  /* 20px */
+    gap: 1.875rem;                       /* 30px */
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer img {
+       margin-bottom: 1.5rem;
+}
+
+.contenedor h3 {
+       margin-top: 1.3125rem;           /* 21px */
+       margin-bottom: 0.9375rem;
+       font-size: 1.125rem;
+}
+
+.contenedor p {
+       margin-bottom: 0.875rem;         /* 14px */
+       font-size: 0.875rem;
+   }
+
+.contenedor li {
+       margin-bottom: 0.5rem;           /* 8px */
+       font-size: 0.875rem;
+}
+
+.contenedor ul {
+    list-style: none;
+}
+
+.contenedor ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contenedor ul li a:hover {
+    text-decoration: underline;
+}
+
+.copyright p {
+       margin: 0.75rem 0;               /* 12px */
+}
+
+.copyright {
+    margin-top: 2.5rem;                  /* 40px */
+    padding: 0.9375rem 1.25rem;          /* 15px 20px */
+    border-top: 1px solid #ffffff;
+    background-color: #081F5C;
+    text-align: center;
+    font-size: 0.75rem;                  /* 12px */
+}
 
 /* Tablet  */
 @media (min-width: 48rem) {
     main {
-        margin-top: 5.3125rem;           /* 85px */
+        margin-top: 4.6875rem;         /* 75px */
     }
 
     .cabecera {
@@ -298,6 +368,22 @@ main {
 
     .servicio-texto {
         grid-area: texto;
+    }
+
+    .contenedorfooter {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logo-footer {
+        align-items: flex-start;
+    }
+
+    .contenedor {
+        flex: 1;
+        margin: 0 0.9375rem;             /* 15px */
     }
 }
 
