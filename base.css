@@ -655,3 +655,39 @@ p {
     height: 31px;
   }
 }
+
+/* MODO OSCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f172a;
+    --color-bg-alt: #1e293b;
+    --color-surface: #1e293b;
+    --color-header-bg: #1e293b;
+    --color-border: #334155;
+    --color-text: #cbd5e1;
+    --color-muted: #94a3b8;
+    --color-heading: #7fb0ff;
+    --color-link: #7fb0ff;
+    --color-link-hover: #a9c9ff;
+  }
+
+  html {
+    background: #0f172a;
+  }
+
+  .encabezado-sitio {
+    background-color: #1e293b;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* En computadora los enlaces del nav van sobre fondo oscuro */
+@media (prefers-color-scheme: dark) and (min-width: 821px) {
+  .navegacion-principal a {
+    color: #e2e8f0;
+  }
+
+  .navegacion-principal a:hover {
+    color: #7fb0ff;
+  }
+}
