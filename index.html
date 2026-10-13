@@ -339,48 +339,6 @@
     </div>
   </footer>
 
-  <!-- Funcionalidad del menú móvil -->
-  <script>
-    const botonMenu = document.querySelector(".boton-menu");
-    const navegacion = document.getElementById("navegacion-principal");
-
-    if (botonMenu && navegacion) {
-
-      // Abrir y cerrar el menú
-      botonMenu.addEventListener("click", function () {
-
-        const estaAbierto = navegacion.classList.toggle("abierto");
-
-        botonMenu.setAttribute(
-          "aria-expanded",
-          String(estaAbierto)
-        );
-
-        botonMenu.setAttribute(
-          "aria-label",
-          estaAbierto ? "Cerrar menú" : "Abrir menú"
-        );
-
-      });
-
-      // Cerrar el menú al seleccionar un enlace
-      navegacion.querySelectorAll("a").forEach(function (enlace) {
-
-        enlace.addEventListener("click", function () {
-
-          navegacion.classList.remove("abierto");
-
-          botonMenu.setAttribute("aria-expanded", "false");
-          botonMenu.setAttribute("aria-label", "Abrir menú");
-
-        });
-
-      });
-
-    }
-
-
-  </script>
 
 </body>
 </html>

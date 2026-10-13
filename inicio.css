@@ -3,11 +3,8 @@
 /* ---------- VARIABLES Y COLORES ---------- */
 
 :root {
-  color-scheme: light !important;
-
   /* Marca PROA */
   --color-primary: #0D3896;
-  --color-primary-dark: #082A70;
   --color-steel: #4F7DB8;
 
   /* Acentos */
@@ -20,16 +17,12 @@
   --color-bg: #ffffff;
   --color-bg-alt: #F1F5FB;
   --color-surface: #ffffff;
-  --color-header-bg: #ffffff;
-  --color-footer-bg: #081F5C;
 
   /* Bordes y textos */
   --color-border: #DCE3EE;
   --color-text: #1B2333;
   --color-muted: #4A4F5A;
   --color-heading: #0D3896;
-  --color-link: #0D3896;
-  --color-link-hover: #082A70;
 
   /* Botones e iconos */
   --color-btn: #0D3896;
@@ -37,31 +30,20 @@
   --color-on-btn: #ffffff;
   --color-icon-bg: #0D3896;
   --color-focus: #0D3896;
-  --color-focus-ring: rgba(15, 63, 168, 0.18);
 
   /* Banners y llamadas a la acción */
   --color-band: linear-gradient(135deg, #0D3896 0%, #082A70 100%);
-  --color-band-solid: #0D3896;
 
   /* Superposición de la portada */
   --hero-o1: rgba(6, 28, 84, 0.86);
   --hero-o2: rgba(6, 28, 84, 0.58);
   --hero-o3: rgba(6, 28, 84, 0.30);
 
-  
-
   /* Diseño general */
-  --radius: 10px;
   --shadow: 0 2px 10px rgba(15, 63, 168, 0.08);
   --shadow-hover: 0 8px 24px rgba(15, 63, 168, 0.16);
-
-
   --header-h: 85px;
   --max-w: 1160px;
-
-  /* Tipografía */
-  --font: "Montserrat", "Segoe UI", system-ui, -apple-system,
-    Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Tipografías y Encabezados del Contenido */
@@ -74,11 +56,11 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -162,14 +144,6 @@ p {
   transform: translateY(-2px);
 }
 
-.boton-principal {
-  background: var(--color-btn);
-  color: var(--color-on-btn);
-}
-
-.boton-principal:hover {
-  background: var(--color-btn-hover);
-}
 
 .boton-claro {
   background: var(--color-accent);
@@ -198,23 +172,6 @@ p {
 
 .boton-oscuro:hover {
   background: var(--color-btn-hover);
-}
-
-.boton-contorno-oscuro {
-  background: transparent;
-  color: var(--color-link);
-  border-color: var(--color-link);
-}
-
-.boton-contorno-oscuro:hover {
-  background: var(--color-btn);
-  border-color: var(--color-btn);
-  color: var(--color-on-btn);
-}
-
-.boton-pequeno {
-  padding: 9px 18px;
-  font-size: 0.95rem;
 }
 
 
@@ -287,7 +244,7 @@ p {
 }
 
 .texto-presentacion p {
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 24px;
 }
 
@@ -333,7 +290,6 @@ p {
   border-radius: 50%;
   background: var(--color-icon-bg);
   color: #fff;
-  font-size: 1rem;
 }
 
 .icono-valor svg {
@@ -350,7 +306,7 @@ p {
 
 .tarjeta-valor p {
   color: var(--color-muted);
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -398,9 +354,6 @@ p {
   margin: 0 0 10px;
 }
 
-.grupo-rutas + .grupo-rutas {
-  margin-top: 22px;
-}
 
 /* ----------  LLAMADA A LA ACCIÓN ---------- */
 
@@ -420,6 +373,15 @@ p {
   color: #dbe4ef;
 }
 
+.seccion p,
+.llamada-contacto p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.seccion .titulo-rutas {
+  font-size: 0.85rem;
+}
 
 @media (max-width: 900px) {
   .cobertura-servicios {
@@ -441,9 +403,6 @@ p {
     gap: 20px;
   }
 
-  .tarjeta-valor {
-    width: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -453,9 +412,7 @@ p {
   }
 }
 
-/* ==========================================================================
-   4. MODO OSCURO PARA EL CUERPO
-   ========================================================================== */
+/* MODO OSCURO PARA EL CUERPO */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -466,21 +423,10 @@ p {
     --color-text: #cbd5e1;
     --color-muted: #94a3b8;
     --color-heading: #7fb0ff;
-    --color-link: #7fb0ff;
   }
 
-  html {
-    background: #0f172a;
-  }
-
-  .tarjeta-valor {
-    background: var(--color-surface);
-    border-color: var(--color-border);
-  }
-
-  .lista-rutas li {
-    background: var(--color-surface);
-    color: var(--color-heading);
-    border-color: var(--color-border);
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
   }
 }
