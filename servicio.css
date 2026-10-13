@@ -3,7 +3,6 @@
 .fondo-presentacion {
     position: relative;
     width: 100%;
-    min-height: 15rem;
     height: 45vh;
     overflow: hidden;
 }
@@ -136,7 +135,7 @@
 
 .servicio p {
     max-width: 30rem;
-    letter-spacing: 0.02em;
+    font-size: 1.05rem;
 }
 
 .puntos {

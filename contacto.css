@@ -1,25 +1,27 @@
-/*BANNER AZUL */
+
+
+/* Banner azul*/
 .contacto-banner {
   padding: 56px 0 64px;
   background: var(--color-primary, #0d3a99);
   color: #fff;
 }
 
-/*CONTENEDOR DEL BANNER Y DEL CONTENIDO DE CONTACTO*/
+/* Contenedor de ancho máximo */
 .contacto-banner .contenedor,
 .contacto-contenido .contenedor {
   width: min(1100px, calc(100% - 48px));
   margin-inline: auto;
 }
 
-/*H1 DEL BANNER DE CONTACTO*/
+/* Título y subtítulo del banner */
 .contacto-banner h1 {
   margin: 0 0 18px;
   color: #fff;
   font-size: 2.2rem;
 }
 
-/*PÁRRAFO Y ENLACE*/
+/* Texto del banner */
 .contacto-banner p {
   max-width: 560px;
   margin: 0;
@@ -28,13 +30,13 @@
   line-height: 1.8;
 }
 
-/*CONTENIDO DE CONTACTO: TARJETAS DE DATOS Y FORMULARIO*/
+/* Contenido de la página: columnas con datos de contacto y formulario */
 .contacto-contenido {
   padding: 24px 0 56px;
   background: #fff;
 }
 
-/*COLUMNAS DE LAS TARJETAS DE CONTACTO*/
+/* Contenedor de columnas */
 .contacto-columnas {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -42,7 +44,7 @@
   align-items: start;
 }
 
-/* TARJETAS DE CONTACTO: DATOS Y FORMULARIO */
+/* Columnas: datos de contacto y formulario */
 .contacto-datos,
 .contacto-formulario {
   padding: 20px;
@@ -53,7 +55,7 @@
   color: var(--color-text, #2b2f3a);
 }
 
-/*H2 DE LAS TARJETAS DE CONTACTO*/
+/* Títulos de las columnas */
 .contacto-datos h2,
 .contacto-formulario h2 {
   margin: 0 0 14px;
@@ -61,13 +63,13 @@
   font-size: 1.4rem;
 }
 
-/*PÁRRAFO DE LA TARJETA DE CONTACTO*/
+/* Texto de las columnas */
 .contacto-formulario > p {
   margin: 0 0 22px;
   font-size: 0.85rem;
 }
 
-/*TABLA: datos de contacto de la empresa */
+/* 3. TABLA DE DATOS DE CONTACTO */
 .tabla-contacto {
   width: 100%;
   border-collapse: collapse;
@@ -75,7 +77,7 @@
   font-size: 0.85rem;
 }
 
-/*FILAS DE LA TABLA DE CONTACTO*/
+/* Filas de la tabla */
 .tabla-contacto th,
 .tabla-contacto td {
   padding: 14px 8px;
@@ -84,32 +86,32 @@
   vertical-align: top;
 }
 
-/*QUITAR EL BORDE INFERIOR DE LA ÚLTIMA FILA DE LA TABLA DE CONTACTO*/
+/* Última fila de la tabla: quitar borde inferior */
 .tabla-contacto tr:last-child th,
 .tabla-contacto tr:last-child td {
   border-bottom: 0;
 }
 
-/*ANCHO DE LA COLUMNA DE LA TABLA DE CONTACTO*/
+/* Encabezados de la tabla: ancho fijo y color azul */
 .tabla-contacto th {
   width: 36%;
   color: var(--color-primary, #0d3a99);
 }
 
-/*ENLACES DE LA TABLA DE CONTACTO*/
+/* Enlaces de la tabla: color azul y subrayado */
 .tabla-contacto a {
   color: var(--color-primary, #0d3a99);
   text-decoration: underline;
 }
 
-/* DISTRIBUCIÓN */
+/* 4. FORMULARIO DE CONTACTO */
 .formulario-contacto {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/*CAMPO DEL FORMULARIO*/
+/* Campos del formulario: etiqueta y campo de entrada */
 .campo {
   display: flex;
   flex-direction: column;
@@ -117,13 +119,13 @@
   min-width: 0;
 }
 
-/*ETIQUETAS DE LOS CAMPOS*/
+/* Etiquetas de los campos: tamaño de fuente y negrita */
 .campo label {
   font-size: 0.85rem;
   font-weight: 700;
 }
 
-/*CAMPOS DE ENTRADA*/
+/* Campos de entrada y área de texto: ancho completo, padding, borde y color de fondo */
 .formulario-contacto input,
 .formulario-contacto textarea {
   width: 100%;
@@ -135,20 +137,20 @@
   font: inherit;
 }
 
-/*CAMPO DE TEXTO MULTILÍNEA*/
+/* Campos de entrada y área de texto: color de borde al enfocar */
 .formulario-contacto textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-/*CAMPO DE ENTRADA ENFOCADO*/
+/* Campos de entrada y área de texto: color de borde al enfocar */
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
   outline: 2px solid var(--color-primary, #0d3a99);
   outline-offset: 1px;
 }
 
-/*BOTÓN DE ENVIAR*/
+/* Botón de envío: alineación, padding, borde, color de fondo y texto */
 .boton-enviar {
   align-self: flex-start;
   padding: 12px 20px;
@@ -161,7 +163,7 @@
   cursor: pointer;
 }
 
-/*BOTÓN DE ENVIAR*/
+/* Botón de envío: efecto hover */
 .boton-enviar:hover {
   filter: brightness(1.15);
 }
@@ -178,18 +180,18 @@
   font-size: 0.85rem;
 }
 
-/* Mostrar el mensaje de estado del formulario cuando sea visible */
+/* Mensaje que aparece al presionar "Enviar mensaje": visible */
 .estado-formulario.visible {
   display: block;
 }
 
-/* ADAPTACIÓN A CELULAR */
+/* 5. RESPONSIVE: en pantallas chicas, las columnas se apilan y el banner se achica */
 @media (max-width: 768px) {
   .contacto-columnas {
     grid-template-columns: 1fr;
   }
 
-  /*TAMAÑO DEL H1 DEL BANNER DE CONTACTO*/
+  /* Banner azul: achicar el padding y el tamaño de fuente del título */
   .contacto-banner h1 {
     font-size: 1.8rem;
   }
