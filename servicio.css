@@ -3,6 +3,7 @@
 .fondo-presentacion {
     position: relative;
     width: 100%;
+    min-height: 15rem;
     height: 45vh;
     overflow: hidden;
 }
