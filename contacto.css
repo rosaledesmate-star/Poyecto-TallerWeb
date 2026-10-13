@@ -1,100 +1,152 @@
-/* 1. ENCABEZADO: logo a la izquierda, menú a la derecha */
+/* 1. ENCABEZADO: logo y menú, igual que Acerca de */
 .encabezado-contacto {
   position: sticky;
   top: 0;
-  z-index: 200;
+  z-index: 1000;
+  overflow-x: hidden;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: normal;
 }
- 
+
+.encabezado-contacto,
+.encabezado-contacto * {
+  box-sizing: content-box;
+}
+
 .menu-contacto {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  height: 82px;
-  margin: 0 auto;
-  padding: 0 40px;
+  width: 100%;
+  padding: 15px 0 0;
 }
- 
+
 .logo-contacto img {
   width: auto;
   height: 45px;
+  max-width: 150px;
+  margin-bottom: 10px;
 }
- 
+
+.menu-contacto nav {
+  width: 100%;
+}
+
 .enlaces-contacto {
   display: flex;
-  gap: 25px;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 12px 0;
+  background: #063F99;
   list-style: none;
 }
- 
+
 .enlaces-contacto a {
-  color: var(--color-primary);
-  font-size: 1.1rem;
+  color: #fff;
+  font-size: 15px;
   font-weight: 700;
   text-decoration: none;
 }
- 
-.enlaces-contacto a:hover {
-  text-decoration: underline;
+
+@media (min-width: 768px) {
+  .encabezado-contacto {
+    padding: 10px 0;
+  }
+
+  .menu-contacto {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .logo-contacto img {
+    height: 55px;
+    margin-bottom: 0;
+  }
+
+  .menu-contacto nav {
+    width: auto;
+  }
+
+  .enlaces-contacto {
+    width: auto;
+    margin-right: 20px;
+    padding: 0;
+    background: transparent;
+  }
+
+  .enlaces-contacto a {
+    color: var(--color-primary);
+    font-size: 18px;
+    transition: color 0.2s ease;
+  }
+
+  .enlaces-contacto a:hover {
+    color: #0b2240;
+    text-decoration: underline;
+  }
 }
- 
+
 /* 2. ENLACE INTERNO: el encabezado no lo tapa */
 #datos {
   scroll-margin-top: 100px;
 }
- 
+
 /* 3. BANNER AZUL: título y descripción */
 .contacto-banner {
   padding: 55px 0;
   background: var(--color-primary);
   color: #fff;
 }
- 
+
 .contacto-banner h1 {
   margin: 0 0 14px;
   color: #fff;
   font-size: 2.2rem;
 }
- 
+
 .contacto-banner p {
   max-width: 750px;
   margin: 0;
 }
- 
+
 .contacto-banner a {
   color: #fff;
   font-weight: 600;
 }
- 
+
 /* 4. TARJETAS: datos a la izquierda, mensaje a la derecha */
 .contacto-contenido {
   padding-top: 32px;
 }
- 
+
 .contacto-columnas {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
   gap: 32px;
   align-items: start;
 }
- 
+
 .contacto-datos,
 .contacto-formulario {
   padding: 28px;
   border-radius: 12px;
   box-shadow: var(--shadow);
 }
- 
+
 /* 5. TABLA: datos de la empresa */
 .tabla-contacto {
   width: 100%;
   border-collapse: collapse;
   overflow-wrap: anywhere;
 }
- 
+
 .tabla-contacto th,
 .tabla-contacto td {
   padding: 14px 12px;
@@ -102,58 +154,58 @@
   text-align: left;
   vertical-align: top;
 }
- 
+
 .tabla-contacto th {
   width: 36%;
   color: var(--color-primary);
 }
- 
+
 /* 6. FORMULARIO: tarjeta azul oscura */
 .contacto-formulario {
   background: #0F2B6E;
   color: #fff;
 }
- 
+
 .contacto-formulario h2 {
   margin-bottom: 6px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
- 
+
 .contacto-formulario > p {
   margin-bottom: 22px;
   text-align: center;
 }
- 
+
 .formulario-contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
- 
+
 .campo {
   display: flex;
   flex-direction: column;
   gap: 6px;
   min-width: 0;
 }
- 
+
 .campo label {
   font-size: 0.9rem;
   font-weight: 600;
 }
- 
+
 .campo-completo,
 .casilla,
 .boton-enviar {
   grid-column: 1 / -1;
 }
- 
+
 .obligatorio {
   color: #9CC3FF;
 }
- 
+
 /* 7. CAMPOS: cajas translúcidas, casilla y botón blanco */
 .formulario-contacto input:not([type="checkbox"]),
 .formulario-contacto textarea {
@@ -166,33 +218,33 @@
   font: inherit;
   color-scheme: dark;
 }
- 
+
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
   outline: 2px solid #fff;
 }
- 
+
 .formulario-contacto ::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
- 
+
 .formulario-contacto textarea {
   min-height: 130px;
   resize: vertical;
 }
- 
+
 .casilla {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
 }
- 
+
 .casilla input {
   width: 20px;
   height: 20px;
 }
- 
+
 .boton-enviar {
   padding: 15px;
   border: 0;
@@ -204,50 +256,20 @@
   text-transform: uppercase;
   cursor: pointer;
 }
- 
+
 /* 8. CELULAR: una sola columna */
 @media (max-width: 768px) {
-  .menu-contacto {
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    padding: 12px 0 0;
-  }
- 
-  .logo-contacto img {
-    height: 40px;
-    margin-bottom: 10px;
-  }
- 
-  .menu-contacto nav {
-    width: 100%;
-    background: var(--color-primary);
-  }
- 
-  .enlaces-contacto {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 12px 10px;
-  }
- 
-  .enlaces-contacto a {
-    color: #fff;
-    font-size: 15px;
-  }
- 
   .contacto-columnas {
     grid-template-columns: 1fr;
   }
- 
+
   .contacto-banner h1 {
     font-size: 1.8rem;
   }
 }
- 
+
 @media (max-width: 600px) {
   .formulario-contacto {
     grid-template-columns: 1fr;
   }
 }
- 
