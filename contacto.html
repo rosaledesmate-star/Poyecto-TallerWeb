@@ -6,54 +6,57 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>Contacto | TRANSPORTE PROA</title>
-  <meta name="description" content="Datos de contacto de TRANSPORTE PROA y formulario para enviarnos un mensaje.">
+  <meta name="description" content="Contacta con TRANSPORTE PROA para consultar nuestros servicios de transporte de carga.">
 
-  <!-- estilos -->
-  <link rel="stylesheet" href="base.css">
+  <!-- Estilos comunes (encabezado y pie de página iguales al index) -->
+  <link rel="stylesheet" href="comun.css">
+  <!-- Estilos propios de la página de contacto -->
   <link rel="stylesheet" href="contacto.css">
 </head>
 
 <body>
 
-  <!-- Encabezado principal -->
-  <header class="encabezado-contacto">
-    <div class="menu-contacto">
+  <!-- Encabezado principal (igual al del index) -->
+  <header class="cabecera">
+    <nav class="navbar-menu">
 
-      <a class="logo-contacto" href="index.html" aria-label="Transporte PROA - Inicio">
-        <img src="logo.svg" alt="Logotipo de Transporte PROA" width="403" height="300">
-      </a>
+      <!-- Logotipo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Transporte PROA- Inicio">
+          <img src="logo.svg" alt="Logotipo de Transporte PROA" width="403" height="300">
+        </a>
+      </div>
 
-      <nav aria-label="Navegación principal">
-        <ul class="enlaces-contacto">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="acerca_de.html">Acerca de</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
-        </ul>
-      </nav>
+      <!-- Navegación principal -->
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca_de.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
 
-    </div>
+    </nav>
   </header>
 
-  <!-- Contenido principal -->
+  <!-- CONTENIDO DE CONTACTO -->
   <main id="contenido">
 
-    <!-- Banner azul -->
+    <!-- FRANJA AZUL A TODO EL ANCHO -->
     <section class="contacto-banner">
       <div class="contenedor">
         <h1>Contáctanos</h1>
-        <p>Estamos disponibles para atender tus consultas. Escríbenos y te responderemos a la brevedad. Si necesitas el precio de un traslado, <a href="cotizacion.html">solicita tu cotización</a>.</p>
+        <p>Estamos disponibles para atender tus consultas y coordinar los detalles de tu servicio de transporte con plataforma. Escríbenos para brindarte información sobre tu solicitud.</p>
       </div>
     </section>
 
-    <!-- Tarjetas de contacto -->
-    <section class="seccion contacto-contenido">
+    <!-- TARJETAS BLANCAS -->
+    <section class="contacto-contenido">
       <div class="contenedor">
         <div class="contacto-columnas">
 
-          <!-- Datos de la empresa -->
+          <!-- DATOS DE CONTACTO -->
           <section class="contacto-datos" id="datos">
-            <h2>Datos de la empresa</h2>
+            <h2>Datos de contacto</h2>
 
             <table class="tabla-contacto">
               <tbody>
@@ -63,7 +66,7 @@
                 </tr>
                 <tr>
                   <th scope="row">WhatsApp</th>
-                  <td>Completar número de contacto</td>
+                  <td><a href="https://wa.me/51996436009" target="_blank" rel="noopener noreferrer">996 436 009</a></td>
                 </tr>
                 <tr>
                   <th scope="row">Teléfono</th>
@@ -81,39 +84,36 @@
             </table>
           </section>
 
-          <!-- Formulario de mensaje -->
-          <section class="contacto-formulario">
+          <!-- FORMULARIO DE MENSAJE -->
+          <section class="contacto-formulario" id="mensaje">
             <h2>Envíanos un mensaje</h2>
-            <p>Transporte Proa S.A.C.</p>
+            <p>Completa los siguientes campos para realizar tu consulta.</p>
 
-            <form class="formulario-contacto" id="form-mensaje" action="#" method="POST">
-
-              <div class="campo">
-                <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" autocomplete="name" required>
-              </div>
+            <form class="formulario-contacto" id="form-contacto" action="#" method="POST">
 
               <div class="campo">
-                <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
-                <input type="email" id="correo" name="correo" placeholder="correo@empresa.com" autocomplete="email" required>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
               </div>
 
-              <div class="campo campo-completo">
-                <label for="asunto">Asunto <span class="obligatorio">*</span></label>
-                <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres consultar?" required>
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
               </div>
 
-              <div class="campo campo-completo">
-                <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
-                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje" required></textarea>
+              <div class="campo">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required>
               </div>
 
-              <label class="casilla">
-                <input type="checkbox" name="acepto" required>
-                <span>Acepto que Transporte Proa S.A.C. use mis datos para responder a mi mensaje.</span>
-              </label>
+              <div class="campo">
+                <label for="mensaje-texto">Tu mensaje</label>
+                <textarea id="mensaje-texto" name="mensaje" rows="6" required></textarea>
+              </div>
 
               <button class="boton-enviar" type="submit">Enviar mensaje</button>
+
+              <p class="estado-formulario" id="estado-formulario" role="status" aria-live="polite"></p>
             </form>
           </section>
 
@@ -121,20 +121,32 @@
       </div>
     </section>
 
+    <!-- Botón de WhatsApp (igual al del index) -->
+    <a class="boton-whatsapp"
+       href="https://wa.me/51996436009?text=Hola%2C%20Transporte%20PROA.%20Deseo%20realizar%20una%20consulta."
+       title="WhatsApp"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
   </main>
 
-  <!-- Pie de página -->
-  <footer class="pie-sitio">
-    <div class="contenedor columnas-pie">
+  <!-- Pie de página (igual al del index) -->
+  <footer>
+    <div class="contenedorfooter">
 
-      <div>
+      <!-- Información de la empresa -->
+      <div class="contenedor logo-footer">
         <a class="logotipo-pie" href="index.html">
-          <img src="logo.svg" alt="Logotipo de Transporte PROA " width="403" height="300" loading="lazy">
+          <img src="logo.svg" alt="Logotipo de Transporte PROA" width="300" height="90" loading="lazy">
         </a>
         <p>Seguridad y puntualidad en cada destino.</p>
       </div>
 
-      <div>
+      <!-- Enlaces de navegación -->
+      <div class="contenedor navegacion">
         <h3>Navegación</h3>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -144,46 +156,46 @@
         </ul>
       </div>
 
-      <div>
+      <!-- Datos de contacto -->
+      <div class="contenedor contacto">
         <h3>Contacto</h3>
-        <ul>
-          <li><a href="mailto:trans_proa@hotmail.com">trans_proa@hotmail.com</a></li>
-          <li>Lunes a sábado, de 8:00 a. m. a 6:00 p. m.</li>
-        </ul>
+        <p>trans_proa@hotmail.com</p>
+        <p>Lunes a sábado, de 8:00 a. m. a 6:00 p. m.</p>
       </div>
 
     </div>
 
-    <div class="pie-inferior">
-      <div class="contenedor">
-        &copy;
-        <span data-anio>2026</span>
-        TRANSPORTE PROA S.A.C. Todos los derechos reservados.
-      </div>
+    <!-- Derechos reservados -->
+    <div class="copyright">
+      <p>&copy; <span data-anio>2026</span> TRANSPORTE PROA S.A.C. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script>
-    /* Envía el mensaje al correo de la empresa (abre el correo del cliente) */
-    const formMensaje = document.getElementById("form-mensaje");
+    /* Enviar mensaje: abre el correo del usuario con el mensaje ya escrito */
+    var formulario = document.getElementById("form-contacto");
+    var estado = document.getElementById("estado-formulario");
 
-    if (formMensaje) {
-      formMensaje.addEventListener("submit", function (e) {
+    if (formulario) {
+      formulario.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const d = new FormData(formMensaje);
-        const lineas = [
-          "Nombre: " + d.get("nombre"),
-          "Correo: " + d.get("correo"),
-          "",
-          d.get("mensaje")
-        ];
+        var datos = new FormData(formulario);
+        var cuerpo =
+          "Nombre: " + datos.get("nombre") + "\n" +
+          "Correo: " + datos.get("correo") + "\n\n" +
+          "Mensaje:\n" + datos.get("mensaje");
 
-        window.location.href = "mailto:trans_proa@hotmail.com?subject=" +
-          encodeURIComponent(d.get("asunto")) + "&body=" + encodeURIComponent(lineas.join("\n"));
+        window.location.href =
+          "mailto:trans_proa@hotmail.com" +
+          "?subject=" + encodeURIComponent(datos.get("asunto")) +
+          "&body=" + encodeURIComponent(cuerpo);
+
+        estado.textContent =
+          "Se abrió tu programa de correo con el mensaje listo. Presiona enviar allí para completar el envío.";
+        estado.classList.add("visible");
       });
     }
   </script>
-
 </body>
 </html>
