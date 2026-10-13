@@ -1,79 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #4a5568;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* NAV celular*/
-.cabecera {
-    background-color: #ffffff;
-    width: 100%;
-    position: fixed;
-    top: 0;      
-    left: 0;      
-    z-index: 1000;    
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.navbar-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0.9375rem 0 0 0;
-}
-
-.logo a {
-    display: block;
-}
-
-.logo img {
-    height: 2.8125rem;                  
-    max-width: 9.375rem;                 
-    margin-bottom: 0.625rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.25rem;
-    width: 100%;
-    padding: 0.75rem 0;
-    background-color: #063F99;
-    line-height: normal;
-}
-
-.nav-links a {
-    color: #ffffff;
-    font-size: 0.9375rem;                
-    font-weight: bold;
-    text-decoration: none;
-}
-
-main {
-    margin-top: 8.125rem;                /* 130px */
-}
 
 /* BANNER */
 .fondo-presentacion {
     position: relative;
     width: 100%;
+    min-height: 15rem;
     height: 45vh;
     overflow: hidden;
 }
@@ -92,12 +22,12 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;              /* título arriba, frase abajo */
+    flex-direction: column;              
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 1.25rem;
-    background-color: rgba(0, 0, 0, 0.45);   /* capa oscura sobre la foto */
+    background-color: rgba(0, 0, 0, 0.45);   
 }
 
 .texto-presentacion h1 {
@@ -117,7 +47,7 @@ main {
 }
 
 .intro-servicios {
-    padding: clamp(3rem, 7vw, 8rem) 1.25rem;    /* mucho aire arriba y abajo */
+    padding: clamp(3rem, 7vw, 8rem) 1.25rem;    
     text-align: center;
 }
 
@@ -137,12 +67,11 @@ main {
 }
 
 .descripcion {
-    max-width: 52rem;                           /* bloque centrado de unos 830px */
+    max-width: 52rem;                           
     margin: 0 auto;
     text-align: left;
     letter-spacing: 0.02em;
 }
-
 
 /*SERVICIOS */
 
@@ -165,7 +94,7 @@ main {
 
 .servicio {
     display: grid;
-    grid-template-columns: 1fr;          /* celular: imagen arriba, texto abajo */
+    grid-template-columns: 1fr;          
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 3rem;
@@ -210,66 +139,37 @@ main {
     letter-spacing: 0.02em;
 }
 
-.boton {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #063F99;
-    color: #ffffff;
-    font-family: inherit;
+.puntos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.puntos .icono {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #063F99;
+    font-size: 2.5rem;
+}
+
+.puntos h4 {
+    margin-bottom: 0.25rem;
+    color: #063F99;
     font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
-.boton:hover {
-    background-color: #0b2240;
+.puntos p {
+    margin: 0 auto;
+    font-size: 0.875rem;
 }
-
 
 
 /* Tablet  */
 @media (min-width: 48rem) {
-    main {
-        margin-top: 5.3125rem;           /* 85px */
-    }
-
-    .cabecera {
-        padding: 0.625rem 0;             /* 10px */
-    }
-
-    .navbar-menu {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2.5rem;               /* 40px */
-        max-width: 75rem;                /* 1200px */
-        margin: 0 auto;
-    }
-
-    .logo img {
-        height: 3.4375rem;               /* 55px */
-        margin-bottom: 0;
-    }
-
-    .nav-links {
-        width: auto;
-        padding: 0;
-        background-color: transparent;
-        margin-right: 1.25rem;           /* 20px */
-    }
-
-    .nav-links a {
-        color: #0D3896;
-        font-size: 1.125rem;             /* 18px */
-        transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-        color: #0b2240;
-        text-decoration: underline;
-    }
-
+  
     .fondo-presentacion {
         height: 55vh;
     }
@@ -291,11 +191,32 @@ main {
     .servicio-texto {
         grid-area: texto;
     }
+
 }
 
 /* Escritorio */
 @media (min-width: 75rem) {
-    .navbar-menu {
-        max-width: 80rem;                /* 1280px */
+    .lista-servicios {
+        padding: 5rem 1.25rem;
+    }
+}
+
+/* MODO OSCURO (el del nav está en comun.css) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0f172a;
+        color: #cbd5e1;
+    }
+ 
+    .lista-servicios {
+        background-color: #1e293b;
+    }
+ 
+    .intro-servicios h2,
+    .lista-servicios h2,
+    .servicio h3,
+    .puntos h4,
+    .puntos .icono {
+        color: #7fb0ff;
     }
 }

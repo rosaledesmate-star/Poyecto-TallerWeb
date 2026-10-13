@@ -1,3 +1,221 @@
+/* ---------- ESTILOS GENERALES ---------- */
+
+/* ---------- VARIABLES Y COLORES ---------- */
+
+:root {
+  color-scheme: light !important;
+
+  /* Marca PROA */
+  --color-primary: #0D3896;
+  --color-primary-dark: #082A70;
+  --color-steel: #4F7DB8;
+
+  /* Acentos */
+  --color-accent: #f7f5f1;
+  --color-accent-hover: #fcfcfc;
+  --color-accent-soft: #ffffff;
+  --color-on-accent: #1B2333;
+
+  /* Fondos y superficies */
+  --color-bg: #ffffff;
+  --color-bg-alt: #F1F5FB;
+  --color-surface: #ffffff;
+  --color-header-bg: #ffffff;
+  --color-footer-bg: #081F5C;
+
+  /* Bordes y textos */
+  --color-border: #DCE3EE;
+  --color-text: #1B2333;
+  --color-muted: #4A4F5A;
+  --color-heading: #0D3896;
+  --color-link: #0D3896;
+  --color-link-hover: #082A70;
+
+  /* Botones e iconos */
+  --color-btn: #0D3896;
+  --color-btn-hover: #082A70;
+  --color-on-btn: #ffffff;
+  --color-icon-bg: #0D3896;
+  --color-focus: #0D3896;
+  --color-focus-ring: rgba(15, 63, 168, 0.18);
+
+  /* Banners y llamadas a la acción */
+  --color-band: linear-gradient(135deg, #0D3896 0%, #082A70 100%);
+  --color-band-solid: #0D3896;
+
+  /* Superposición de la portada */
+  --hero-o1: rgba(6, 28, 84, 0.86);
+  --hero-o2: rgba(6, 28, 84, 0.58);
+  --hero-o3: rgba(6, 28, 84, 0.30);
+
+  
+
+  /* Diseño general */
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(15, 63, 168, 0.08);
+  --shadow-hover: 0 8px 24px rgba(15, 63, 168, 0.16);
+
+
+  --header-h: 85px;
+  --max-w: 1160px;
+
+  /* Tipografía */
+  --font: "Montserrat", "Segoe UI", system-ui, -apple-system,
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Tipografías y Encabezados del Contenido */
+h1,
+h2,
+h3 {
+  margin: 0 0 0.6em;
+  color: var(--color-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* ---------- CONTENEDORES Y SECCIONES ---------- */
+
+.contenedor {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  padding: 72px 0;
+}
+
+.seccion-alternativa {
+  background: var(--color-bg-alt);
+}
+
+.titulo-seccion {
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.titulo-seccion p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--color-muted);
+}
+
+/* ---------- ACCESIBILIDAD Y FOCO ---------- */
+
+.enlace-saltar-contenido {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  z-index: 300;
+  padding: 10px 16px;
+  background: var(--color-btn);
+  color: #ffffff;
+}
+
+.enlace-saltar-contenido:focus {
+  top: 10px;
+  left: 10px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* ---------- BOTONES ---------- */
+
+.boton {
+  display: inline-block;
+  padding: 13px 26px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton-principal {
+  background: var(--color-btn);
+  color: var(--color-on-btn);
+}
+
+.boton-principal:hover {
+  background: var(--color-btn-hover);
+}
+
+.boton-claro {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.boton-claro:hover {
+  background: var(--color-accent-hover);
+}
+
+.boton-contorno {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.boton-contorno:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+.boton-oscuro {
+  background: var(--color-btn);
+  color: var(--color-on-btn);
+}
+
+.boton-oscuro:hover {
+  background: var(--color-btn-hover);
+}
+
+.boton-contorno-oscuro {
+  background: transparent;
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+.boton-contorno-oscuro:hover {
+  background: var(--color-btn);
+  border-color: var(--color-btn);
+  color: var(--color-on-btn);
+}
+
+.boton-pequeno {
+  padding: 9px 18px;
+  font-size: 0.95rem;
+}
 
 
 /* ---------- Portada principal ---------- */
@@ -31,6 +249,9 @@
 .portada-principal h1 {
   color: #fff;
   margin-bottom: 0.3em;
+  max-width: 550px;
+  text-align: left;
+  line-height: 1.15;
 }
 
 .texto-destacado {
@@ -38,6 +259,8 @@
   font-weight: 600;
   color: var(--color-accent-soft);
   margin-bottom: 1em;
+  text-align: left;
+  max-width: 600px;
 }
 
 .portada-principal p {
@@ -179,8 +402,30 @@
   margin-top: 22px;
 }
 
+/* ----------  LLAMADA A LA ACCIÓN ---------- */
 
-/* ---------- Responsive ---------- */
+.llamada-contacto {
+  padding: 64px 0;
+  background: var(--color-band);
+  color: #ffffff;
+  text-align: center;
+}
+
+.llamada-contacto h2 {
+  color: #ffffff;
+}
+
+.llamada-contacto p {
+  margin-bottom: 1.6em;
+  color: #dbe4ef;
+}
+
+
+@media (max-width: 900px) {
+  .cobertura-servicios {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 768px) {
   .presentacion-empresa {
@@ -190,6 +435,15 @@
   .imagen-presentacion img {
     height: 260px;
   }
+
+  .tarjetas-valores {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjeta-valor {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -198,20 +452,35 @@
     text-align: center;
   }
 }
-@media (max-width: 768px) {
-  .tarjetas-valores {
-    grid-template-columns: 1fr;
-    gap: 20px;
+
+/* ==========================================================================
+   4. MODO OSCURO PARA EL CUERPO
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f172a;
+    --color-bg-alt: #1e293b;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+    --color-text: #cbd5e1;
+    --color-muted: #94a3b8;
+    --color-heading: #7fb0ff;
+    --color-link: #7fb0ff;
+  }
+
+  html {
+    background: #0f172a;
   }
 
   .tarjeta-valor {
-    width: 100%;
-    box-sizing: border-box;
+    background: var(--color-surface);
+    border-color: var(--color-border);
   }
-}
 
-@media (max-width: 900px) {
-  .cobertura-servicios {
-    grid-template-columns: 1fr;
+  .lista-rutas li {
+    background: var(--color-surface);
+    color: var(--color-heading);
+    border-color: var(--color-border);
   }
 }
