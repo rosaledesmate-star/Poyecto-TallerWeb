@@ -406,6 +406,34 @@ p {
   color: #dbe4ef;
 }
 
+/* ---------- BOTÓN DE WHATSAPP ---------- */
+
+.boton-whatsapp {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 58px;
+  height: 58px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  transition: transform 0.3s ease;
+}
+
+.boton-whatsapp img {
+  width: 35px;
+  height: 35px;
+}
+
+.boton-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+
 
 /* ----------  PIE DE PÁGINA ---------- */
 
@@ -610,5 +638,20 @@ p {
   *::after {
     scroll-behavior: auto !important;
     transition: none !important;
+  }
+}
+
+/*----- remposive de whatsapp-----*/
+@media (max-width: 600px) {
+  .boton-whatsapp {
+    right: 15px;
+    bottom: 15px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .boton-whatsapp img {
+    width: 31px;
+    height: 31px;
   }
 }
