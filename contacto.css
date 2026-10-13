@@ -18,7 +18,7 @@
 .contacto-banner h1 {
   margin: 0 0 18px;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 /* Texto del banner */
@@ -39,7 +39,7 @@
 /* Contenedor de columnas */
 .contacto-columnas {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -185,14 +185,76 @@
   display: block;
 }
 
-/* 5. RESPONSIVE: en pantallas chicas, las columnas se apilan y el banner se achica */
-@media (max-width: 768px) {
+/* 5. TABLET (desde 768px): dos columnas y título más grande */
+@media (min-width: 48rem) {
   .contacto-columnas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Banner azul: achicar el padding y el tamaño de fuente del título */
   .contacto-banner h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+}
+
+/* 6. MODO OSCURO (el de la cabecera está en comun.css) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #cbd5e1;
+  }
+
+  .contacto-banner {
+    background: #0b2a73;
+  }
+
+  .contacto-contenido {
+    background: #0f172a;
+  }
+
+  .contacto-datos,
+  .contacto-formulario {
+    border-color: #334155;
+    background: #1e293b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: #cbd5e1;
+  }
+
+  .contacto-datos h2,
+  .contacto-formulario h2,
+  .tabla-contacto th,
+  .tabla-contacto a {
+    color: #7fb0ff;
+  }
+
+  .tabla-contacto th,
+  .tabla-contacto td {
+    border-bottom-color: #334155;
+  }
+
+  .tabla-contacto tr:last-child th,
+  .tabla-contacto tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    border-color: #475569;
+    background: #0f172a;
+    color: #cbd5e1;
+  }
+
+  .formulario-contacto input:focus,
+  .formulario-contacto textarea:focus {
+    outline-color: #7fb0ff;
+  }
+
+  .boton-enviar {
+    background: #2A6EBD;
+  }
+
+  .estado-formulario {
+    border-left-color: #7fb0ff;
+    background: #172554;
+    color: #7fb0ff;
   }
 }
