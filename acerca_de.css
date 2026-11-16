@@ -49,12 +49,19 @@ position: relative;
 .textoinformativo p, .textomision p, .textovision p {
     color: #4a5568;
     line-height: 1.6;
-    font-size: 1.05rem;
-    margin: 0;
+    font-size: 1.22rem;
 }
-
-.imagen-quienes, .imagen-mision, .imagen-vision {
-    display: none; 
+     .imagen-quienes, .imagen-mision, .imagen-vision {
+        display: block; 
+        width: 90%; 
+        margin-top: 20px;
+    }
+.imagen-quienes img, .imagen-mision img, .imagen-vision img {
+    width: 100%;
+        height: 390px;
+        object-fit: cover; 
+        border-radius: 12px; 
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
 }
 .QUIENES, .MISION, .VISION {
     display: flex;
@@ -90,14 +97,73 @@ position: relative;
     }
      .imagen-quienes, .imagen-mision, .imagen-vision {
         display: block; 
-        width: 30%; 
+        width: 300px; 
     }
     .imagen-quienes img, .imagen-mision img, .imagen-vision img {
-        width: 100%;
-        height: 350px;
+        width: 300px;
+        height: 390px;
         object-fit: cover; 
         border-radius: 12px; 
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        display: block;
+        .textoinformativo h2, .textomision h2, .textovision h2 {
+          margin-top: 0;
+          margin-bottom: 15px;
+          margin-left: 20px;
+}
+
+    .textoinformativo p, .textomision p, .textovision p {
+         line-height: 1.6;
+         margin-left: 20px;
+}
+    }
+    
+}
+
+@media (min-width: 992px) {
+   
+.fondopresentacion {
+        height: 91vh; 
+}
+.MISION { 
+    background-color: #F1F5FB;
+    width: 100%;
+ } 
+ .QUIENES, .MISION, .VISION {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 70px 40px; 
+    }
+ .textoinformativo, .textomision, .textovision {
+        text-align: left; 
+        width: 50%; 
+        max-width: none;
+    }
+    .textoinformativo h2, .textomision h2, .textovision h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 70px;
+}
+
+.textoinformativo p, .textomision p, .textovision p {
+    line-height: 1.6;
+    font-size: 1.22rem;
+    margin-left: 70px;
+}
+     .imagen-quienes, .imagen-mision, .imagen-vision {
+        display: block; 
+        width: 350px; 
+        margin-right: 50px;
+    }
+    .imagen-quienes img, .imagen-mision img, .imagen-vision img {
+        width: 350px;
+        height: 390px;
+        object-fit: cover; 
+        border-radius: 12px; 
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        display: block;
+
     }
     
 }
