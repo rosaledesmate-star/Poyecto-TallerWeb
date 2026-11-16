@@ -1,0 +1,222 @@
+
+/* BANNER */
+.fondo-presentacion {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+}
+
+.fondo-presentacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+.texto-presentacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;              
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.25rem;
+    background-color: rgba(0, 0, 0, 0.45);   
+}
+
+.texto-presentacion h1 {
+    color: #ffffff;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.texto-presentacion p {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 3px solid #2A6EBD;
+    color: #ffffff;
+    font-size: clamp(0.95rem, 0.8rem + 0.8vw, 1.25rem);
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.intro-servicios {
+    padding: clamp(3rem, 7vw, 8rem) 1.25rem;    
+    text-align: center;
+}
+
+.etiqueta {
+    margin-bottom: 1rem;
+    color: #2A6EBD;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.intro-servicios h2 {
+    margin-bottom: 2rem;
+    color: #063F99;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+    line-height: 1.2;
+}
+
+.descripcion {
+    max-width: 52rem;                           
+    margin: 0 auto;
+    text-align: left;
+    letter-spacing: 0.02em;
+}
+
+/*SERVICIOS */
+
+.lista-servicios {
+    padding: 3rem 1.25rem;
+    background-color: #f4f6f8;
+}
+
+/* Contenido centrado con ancho máximo */
+.lista-servicios > * {
+    max-width: 67.5rem;                  /* 1080px */
+    margin-inline: auto;
+}
+
+.lista-servicios h2 {
+    margin-bottom: 2.5rem;
+    color: #063F99;
+    text-align: center;
+}
+
+.servicio {
+    display: grid;
+    grid-template-columns: 1fr;          
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.servicio img {
+    width: 100%;
+    aspect-ratio: 9 / 8;
+    object-fit: cover;
+}
+
+.servicio-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.servicio header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.servicio span {
+    color: #2A6EBD;
+    font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    line-height: 1;
+}
+
+.servicio h3 {
+    color: #063F99;
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    line-height: 1.2;
+}
+
+.servicio p {
+    max-width: 30rem;
+    font-size: 1.05rem;
+}
+
+.puntos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.puntos .icono {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #063F99;
+    font-size: 2.5rem;
+}
+
+.puntos h4 {
+    margin-bottom: 0.25rem;
+    color: #063F99;
+    font-size: 1rem;
+}
+
+.puntos p {
+    margin: 0 auto;
+    font-size: 0.875rem;
+}
+
+/* Tablet  */
+@media (min-width: 48rem) {
+  
+    .fondo-presentacion {
+        height: 55vh;
+    }
+
+    .servicio {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "imagen texto";
+        gap: 3rem;
+    }
+
+    .servicio:nth-of-type(even) {
+        grid-template-areas: "texto imagen";
+    }
+
+    .servicio img {
+        grid-area: imagen;
+    }
+
+    .servicio-texto {
+        grid-area: texto;
+    }
+
+}
+
+/* Escritorio */
+@media (min-width: 75rem) {
+    .lista-servicios {
+        padding: 5rem 1.25rem;
+    }
+}
+
+/* MODO OSCURO (el del nav está en comun.css) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0f172a;
+        color: #cbd5e1;
+    }
+ 
+    .lista-servicios {
+        background-color: #1e293b;
+    }
+ 
+    .intro-servicios h2,
+    .lista-servicios h2,
+    .servicio h3,
+    .puntos h4,
+    .puntos .icono {
+        color: #7fb0ff;
+    }
+}
+
+
