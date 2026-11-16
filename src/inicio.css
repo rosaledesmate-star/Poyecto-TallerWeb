@@ -1,5 +1,5 @@
-/* SECCIONES */
-section {
+/* SECCIONES (solo dentro de la página de inicio) */
+:where(.pagina-inicio) section {
     padding: 2.75rem max(1.5rem, calc((100% - 67.5rem) / 2));
     /* contenido centrado, máx. 1080px */
 }
@@ -8,13 +8,13 @@ section {
     background-color: #f4f6f8;
 }
 
-section h2,
+:where(.pagina-inicio) section h2,
 .valores h3,
 .valores .icono {
     color: #063F99;
 }
 
-section h2 {
+:where(.pagina-inicio) section h2 {
     margin-bottom: 1.25rem;
     font-size: clamp(1.5rem, 1.1rem + 2vw, 2.5rem);
     line-height: 1.2;
@@ -105,6 +105,7 @@ section h2 {
     margin: 1.25rem 0 1.75rem;
     font-size: clamp(0.9rem, 0.75rem + 0.8vw, 1.25rem);
 }
+
 /* PRESENTACIÓN Y COBERTURA */
 .presentacion,
 .cobertura {
@@ -119,6 +120,7 @@ section h2 {
     object-fit: cover;
     border-radius: 0.75rem;
 }
+
 /* VALORES */
 .valores {
     display: grid;
@@ -133,9 +135,9 @@ section h2 {
     padding: 1.25rem;
     background-color: #ffffff;
     border: 1px solid #dce3ee;
-    border-top: 4px solid #063F99;     
+    border-top: 4px solid #063F99;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 14px rgba(6, 63, 153, 0.08);  
+    box-shadow: 0 4px 14px rgba(6, 63, 153, 0.08);
     text-align: center;
 }
 
@@ -186,11 +188,10 @@ section h2 {
 .llamada h2 {
     color: #ffffff;
 }
-a.boton-whatsapp,
-a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
+
 /* TABLET */
 @media (min-width: 48rem) {
-    section {
+    :where(.pagina-inicio) section {
         padding-block: 3rem;
     }
 
@@ -238,30 +239,29 @@ a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
 
 /* ESCRITORIO */
 @media (min-width: 75rem) {
-    section {
+    :where(.pagina-inicio) section {
         padding-block: 5rem;
     }
 }
 
-/* MODO OSCURO (el del nav está en comun.css) */
+/* MODO OSCURO (el body y el nav están en comun.css) */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0f172a;
-        color: #cbd5e1;
-    }
     .alt {
         background-color: #1e293b;
     }
+
     .valores article {
         background-color: #1e293b;
         border-color: #334155;
         border-top-color: #7fb0ff;
         box-shadow: none;
     }
+
     .cobertura li {
         background-color: #1e293b;
     }
-    section h2,
+
+    :where(.pagina-inicio) section h2,
     .valores h3,
     .valores .icono,
     .cobertura li {

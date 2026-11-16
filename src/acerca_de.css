@@ -1,12 +1,4 @@
 
-html,body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .fondopresentacion{
 position: relative; 
   width: 100%; 
@@ -68,7 +60,7 @@ position: relative;
 .MISION { background-color: #F1F5FB; } 
 
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
    
 .fondopresentacion {
         height: 91vh; 
@@ -104,10 +96,6 @@ position: relative;
 
 /* MODO OSCURO */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0f172a;
-        color: #cbd5e1;
-    }
  
     .QUIENES,
     .VISION {

@@ -198,10 +198,6 @@
 
 /* 6. MODO OSCURO (el de la cabecera está en comun.css) */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0f172a;
-    color: #cbd5e1;
-  }
 
   .contacto-banner {
     background: #0b2a73;
