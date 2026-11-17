@@ -1,6 +1,64 @@
 import { useEffect } from 'react'
 import '../servicio.css'
 
+const servicios = [
+  {
+    numero: 1,
+    imagen: '/icono1Servicios.png',
+    alt: 'Icono de Transporte de Acero y Hierro',
+    titulo: 'Transporte de Acero y Hierro',
+    descripcion:
+      'Servicio especializado en el traslado pesado de perfiles, tubos, bobinas y varillas de acero o hierro. Operamos con clientes del sector metalmecánico como Aceros Arequipa desde 2008.',
+    icono: 'fa-truck',
+    puntoTitulo: 'Hasta 31 t',
+    puntoTexto: 'Plataforma para carga pesada.',
+  },
+  {
+    numero: 2,
+    imagen: '/icono2Servicios.png',
+    alt: 'Icono de Transporte de Materiales de Construcción',
+    titulo: 'Transporte de Materiales de Construcción',
+    descripcion:
+      'Traslado eficiente y seguro de estructuras, prefabricados e insumos pesados para el sector construcción en Lima, Lurín, Sur Chico y Callao mediante viajes programados.',
+    icono: 'fa-location-dot',
+    puntoTitulo: 'Cobertura',
+    puntoTexto: 'Lima, Lurín, Sur Chico y Callao.',
+  },
+  {
+    numero: 3,
+    imagen: '/icono3Servicios.jpg',
+    alt: 'Icono de Transporte de Materias Primas',
+    titulo: 'Transporte de Materias Primas',
+    descripcion:
+      'Soluciones de logística para abastecimiento de industrias y el sector agrícola. Movilizamos insumos a granel o empaquetados aptos para plataforma hasta con 31 toneladas de capacidad.',
+    icono: 'fa-layer-group',
+    puntoTitulo: 'Industria y agro',
+    puntoTexto: 'Abastecemos a industrias y al sector agrícola.',
+  },
+  {
+    numero: 4,
+    imagen: '/icono4Servicios.jpg',
+    alt: 'Icono de Transporte de Chatarra',
+    titulo: 'Transporte de Chatarra',
+    descripcion:
+      'Servicio orientado al reciclaje industrial y traslado de residuos metálicos pesados desde centros de acopio o plantas industriales hacia fundiciones principales en Ica, Pisco y Callao.',
+    icono: 'fa-location-dot',
+    puntoTitulo: 'Fundiciones',
+    puntoTexto: 'Ica, Pisco y Callao.',
+  },
+  {
+    numero: 5,
+    imagen: '/icono5Servicios.jpg',
+    alt: 'Icono de Otros Productos y Materiales para Plataforma',
+    titulo: 'Otros Productos y Materiales para Plataforma',
+    descripcion:
+      'Acondicionamos nuestros tractos con plataforma para cualquier tipo de carga pesada diversa que requiera amarre de seguridad, monitoreo GPS y checklist preventivo antes de cada viaje.',
+    icono: 'fa-lock',
+    puntoTitulo: 'Amarre de seguridad',
+    puntoTexto: 'Carga firme y sin movimientos durante todo el viaje.',
+  },
+]
+
 export default function Servicios() {
   useEffect(() => {
     document.title = 'Servicios | TRANSPORTE PROA'
@@ -30,119 +88,25 @@ export default function Servicios() {
       <section className="lista-servicios">
         <h2>Tipos de Carga que Transportamos</h2>
 
-        {/* Servicio 1 */}
-        <article className="servicio">
-          <img src="/icono1Servicios.png" alt="Icono de Transporte de Acero y Hierro" />
-          <div className="servicio-texto">
-            <header>
-              <span>1</span>
-              <h3>Transporte de Acero y Hierro</h3>
-            </header>
-            <p>
-              Servicio especializado en el traslado pesado de perfiles, tubos, bobinas y varillas
-              de acero o hierro. Operamos con clientes del sector metalmecánico como Aceros
-              Arequipa desde 2008.
-            </p>
-            <ul className="puntos">
-              <li>
-                <i className="fa-solid fa-truck icono"></i>
-                <h4>Hasta 31 t</h4>
-                <p>Plataforma para carga pesada.</p>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        {/* Servicio 2 */}
-        <article className="servicio">
-          <img src="/icono2Servicios.png" alt="Icono de Transporte de Materiales de Construcción" />
-          <div className="servicio-texto">
-            <header>
-              <span>2</span>
-              <h3>Transporte de Materiales de Construcción</h3>
-            </header>
-            <p>
-              Traslado eficiente y seguro de estructuras, prefabricados e insumos pesados para el
-              sector construcción en Lima, Lurín, Sur Chico y Callao mediante viajes programados.
-            </p>
-            <ul className="puntos">
-              <li>
-                <i className="fa-solid fa-location-dot icono"></i>
-                <h4>Cobertura</h4>
-                <p>Lima, Lurín, Sur Chico y Callao.</p>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        {/* Servicio 3 */}
-        <article className="servicio">
-          <img src="/icono3Servicios.jpg" alt="Icono de Transporte de Materias Primas" />
-          <div className="servicio-texto">
-            <header>
-              <span>3</span>
-              <h3>Transporte de Materias Primas</h3>
-            </header>
-            <p>
-              Soluciones de logística para abastecimiento de industrias y el sector agrícola.
-              Movilizamos insumos a granel o empaquetados aptos para plataforma hasta con 31
-              toneladas de capacidad.
-            </p>
-            <ul className="puntos">
-              <li>
-                <i className="fa-solid fa-layer-group icono"></i>
-                <h4>Industria y agro</h4>
-                <p>Abastecemos a industrias y al sector agrícola.</p>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        {/* Servicio 4 */}
-        <article className="servicio">
-          <img src="/icono4Servicios.jpg" alt="Icono de Transporte de Chatarra" />
-          <div className="servicio-texto">
-            <header>
-              <span>4</span>
-              <h3>Transporte de Chatarra</h3>
-            </header>
-            <p>
-              Servicio orientado al reciclaje industrial y traslado de residuos metálicos pesados
-              desde centros de acopio o plantas industriales hacia fundiciones principales en Ica,
-              Pisco y Callao.
-            </p>
-            <ul className="puntos">
-              <li>
-                <i className="fa-solid fa-location-dot icono"></i>
-                <h4>Fundiciones</h4>
-                <p>Ica, Pisco y Callao.</p>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        {/* Servicio 5 */}
-        <article className="servicio">
-          <img src="/icono5Servicios.jpg" alt="Icono de Otros Productos y Materiales para Plataforma" />
-          <div className="servicio-texto">
-            <header>
-              <span>5</span>
-              <h3>Otros Productos y Materiales para Plataforma</h3>
-            </header>
-            <p>
-              Acondicionamos nuestros tractos con plataforma para cualquier tipo de carga pesada
-              diversa que requiera amarre de seguridad, monitoreo GPS y checklist preventivo antes
-              de cada viaje.
-            </p>
-            <ul className="puntos">
-              <li>
-                <i className="fa-solid fa-lock icono"></i>
-                <h4>Amarre de seguridad</h4>
-                <p>Carga firme y sin movimientos durante todo el viaje.</p>
-              </li>
-            </ul>
-          </div>
-        </article>
+        {servicios.map((servicio) => (
+          <article className="servicio" key={servicio.numero}>
+            <img src={servicio.imagen} alt={servicio.alt} />
+            <div className="servicio-texto">
+              <header>
+                <span>{servicio.numero}</span>
+                <h3>{servicio.titulo}</h3>
+              </header>
+              <p>{servicio.descripcion}</p>
+              <ul className="puntos">
+                <li>
+                  <i className={'fa-solid ' + servicio.icono + ' icono'}></i>
+                  <h4>{servicio.puntoTitulo}</h4>
+                  <p>{servicio.puntoTexto}</p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        ))}
       </section>
     </>
   )

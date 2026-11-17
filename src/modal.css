@@ -1,0 +1,126 @@
+/* VENTANA MODAL */
+.modal-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;                       /* por encima de la cabecera y del botón de WhatsApp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: modal-aparecer 0.25s ease;
+}
+
+.modal-caja {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;                    /* 448px */
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    color: #4a5568;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modal-subir 0.25s ease;
+}
+
+.modal-caja h2 {
+    margin-bottom: 0.75rem;
+    color: #063F99;
+    font-size: 1.4rem;
+}
+
+.modal-caja p {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: transparent;
+    color: #4a5568;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-cerrar:hover {
+    color: #063F99;
+}
+
+.modal-boton {
+    padding: 0.6rem 1.25rem;
+    border: 0;
+    border-radius: 0.375rem;
+    background: #063F99;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-boton:hover {
+    background: #2A6EBD;
+}
+
+.modal-cerrar:focus-visible,
+.modal-boton:focus-visible {
+    outline: 2px solid #063F99;
+    outline-offset: 2px;
+}
+
+/* Evita que la página se mueva por detrás mientras el modal está abierto */
+body.modal-abierto {
+    overflow: hidden;
+}
+
+@keyframes modal-aparecer {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes modal-subir {
+    from { opacity: 0; transform: translateY(1rem); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-fondo,
+    .modal-caja {
+        animation: none;
+    }
+}
+
+/* MODO OSCURO */
+@media (prefers-color-scheme: dark) {
+    .modal-caja {
+        background-color: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .modal-caja h2,
+    .modal-cerrar:hover {
+        color: #7fb0ff;
+    }
+
+    .modal-cerrar {
+        color: #cbd5e1;
+    }
+
+    .modal-boton {
+        background: #2A6EBD;
+    }
+
+    .modal-boton:hover {
+        background: #3b82d6;
+    }
+
+    .modal-cerrar:focus-visible,
+    .modal-boton:focus-visible {
+        outline-color: #7fb0ff;
+    }
+}

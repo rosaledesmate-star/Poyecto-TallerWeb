@@ -2,6 +2,26 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../inicio.css'
 
+const valores = [
+  {
+    icono: 'fa-handshake',
+    titulo: 'Compromiso',
+    texto: 'Orientación al cumplimiento de las necesidades de cada cliente.',
+  },
+  {
+    icono: 'fa-shield-halved',
+    titulo: 'Seguridad',
+    texto: 'Compromiso con el cuidado de la carga durante la prestación de cada servicio.',
+  },
+  {
+    icono: 'fa-clock',
+    titulo: 'Eficiencia',
+    texto: 'Atención puntual y organizada de los horarios y compromisos acordados.',
+  },
+]
+
+const ciudades = ['Lima', 'Cañete', 'Chincha', 'Pisco', 'Ica']
+
 export default function Inicio() {
   useEffect(() => {
     document.title = 'TRANSPORTE PROA'
@@ -40,21 +60,13 @@ export default function Inicio() {
       {/* Valores */}
       <section className="valores alt">
         <h2>Nuestros valores</h2>
-        <article>
-          <i className="fa-solid fa-handshake icono" aria-hidden="true"></i>
-          <h3>Compromiso</h3>
-          <p>Orientación al cumplimiento de las necesidades de cada cliente.</p>
-        </article>
-        <article>
-          <i className="fa-solid fa-shield-halved icono" aria-hidden="true"></i>
-          <h3>Seguridad</h3>
-          <p>Compromiso con el cuidado de la carga durante la prestación de cada servicio.</p>
-        </article>
-        <article>
-          <i className="fa-solid fa-clock icono" aria-hidden="true"></i>
-          <h3>Eficiencia</h3>
-          <p>Atención puntual y organizada de los horarios y compromisos acordados.</p>
-        </article>
+        {valores.map((valor) => (
+          <article key={valor.titulo}>
+            <i className={'fa-solid ' + valor.icono + ' icono'} aria-hidden="true"></i>
+            <h3>{valor.titulo}</h3>
+            <p>{valor.texto}</p>
+          </article>
+        ))}
       </section>
 
       {/* Servicios */}
@@ -77,11 +89,11 @@ export default function Inicio() {
             diferentes destinos.
           </p>
           <ul>
-            <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Lima</li>
-            <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Cañete</li>
-            <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Chincha</li>
-            <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Pisco</li>
-            <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Ica</li>
+            {ciudades.map((ciudad) => (
+              <li key={ciudad}>
+                <i className="fa-solid fa-location-dot" aria-hidden="true"></i> {ciudad}
+              </li>
+            ))}
           </ul>
           <Link className="boton" to="/contacto">CONSULTAR UNA RUTA</Link>
         </div>

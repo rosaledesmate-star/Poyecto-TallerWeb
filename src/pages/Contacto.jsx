@@ -1,16 +1,22 @@
 import { useEffect, useState } from 'react'
+import Modal from '../components/Modal.jsx'
 import '../contacto.css'
 
 export default function Contacto() {
-  const [enviado, setEnviado] = useState(false)
+  const [modalAbierto, setModalAbierto] = useState(false)
 
   useEffect(() => {
     document.title = 'Contacto | TRANSPORTE PROA'
   }, [])
 
+  function cerrarModal() {
+    setModalAbierto(false)
+  }
+
   function manejarEnvio(e) {
     e.preventDefault()
-    const datos = new FormData(e.target)
+    const formulario = e.target
+    const datos = new FormData(formulario)
     const cuerpo =
       'Nombre: ' + datos.get('nombre') + '\n' +
       'Correo: ' + datos.get('correo') + '\n\n' +
@@ -21,7 +27,8 @@ export default function Contacto() {
       '?subject=' + encodeURIComponent(datos.get('asunto')) +
       '&body=' + encodeURIComponent(cuerpo)
 
-    setEnviado(true)
+    formulario.reset()
+    setModalAbierto(true)
   }
 
   return (
@@ -103,21 +110,23 @@ export default function Contacto() {
                 </div>
 
                 <button className="boton-enviar" type="submit">Enviar mensaje</button>
-
-                <p
-                  className={'estado-formulario' + (enviado ? ' visible' : '')}
-                  role="status"
-                  aria-live="polite"
-                >
-                  {enviado &&
-                    'Se abrió tu programa de correo con el mensaje listo. Presiona enviar allí para completar el envío.'}
-                </p>
               </form>
             </section>
 
           </div>
         </div>
       </section>
+
+      {/* Ventana modal de confirmación (fuera de las tarjetas para no heredar sus estilos) */}
+      <Modal abierto={modalAbierto} onCerrar={cerrarModal} titulo="Mensaje listo para enviar">
+        <p>
+          Se abrió tu programa de correo con el mensaje escrito. Presiona enviar allí para
+          completar el envío.
+        </p>
+        <button className="modal-boton" type="button" onClick={cerrarModal}>
+          Entendido
+        </button>
+      </Modal>
     </>
   )
 }
