@@ -1,19 +1,13 @@
 /* SECCIONES */
 section {
-    padding: 2.75rem max(1.5rem, calc((100% - 67.5rem) / 2));
-    /* contenido centrado, máx. 1080px */
+    padding: 2.75rem max(1.5rem, calc((100% - 67.5rem) / 2)); /* contenido centrado, máx. 1080px */
 }
-
 .alt {
     background-color: #f4f6f8;
 }
-
-section h2,
-.valores h3,
-.valores .icono {
+section h2,.valores h3,.valores .icono {
     color: #063F99;
 }
-
 section h2 {
     margin-bottom: 1.25rem;
     font-size: clamp(1.5rem, 1.1rem + 2vw, 2.5rem);
@@ -41,8 +35,7 @@ section h2 {
     border-color: #2A6EBD;
 }
 
-/* botón con fondo blanco */
-.claro {
+.claro { /* botón con fondo blanco */
     background-color: #ffffff;
     border-color: #ffffff;
     color: #063F99;
@@ -63,7 +56,7 @@ section h2 {
     align-items: flex-start;
     justify-content: center;
     min-height: 34rem;
-    padding-block: 2rem;
+    padding: 2rem 5%;
     overflow: hidden;
     background-color: #1e293b;
     color: #ffffff;
@@ -98,16 +91,17 @@ section h2 {
 .portada h1 {
     max-width: 36rem;
     font-size: clamp(1.3rem, 0.6rem + 3.5vw, 3.5rem);
+    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
 }
 
 .portada p {
     max-width: 32rem;
     margin: 1.25rem 0 1.75rem;
     font-size: clamp(0.9rem, 0.75rem + 0.8vw, 1.25rem);
+    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
 }
 /* PRESENTACIÓN Y COBERTURA */
-.presentacion,
-.cobertura {
+.presentacion, .cobertura {
     display: grid;
     gap: 1.5rem;
 }
@@ -118,6 +112,29 @@ section h2 {
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: 0.75rem;
+}
+/* SERVICIOS */
+section.servicios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+.servicios > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.servicios > img {
+    width: 100%;
+    height: clamp(200px, 35vw, 420px);
+    object-fit: cover;
+    object-position: center;
 }
 /* VALORES */
 .valores {
@@ -139,8 +156,7 @@ section h2 {
     text-align: center;
 }
 
-.valores h3,
-.valores .icono {
+.valores h3,.valores .icono {
     margin-bottom: 0.5rem;
     color: #063F99;
 }
@@ -149,13 +165,19 @@ section h2 {
     display: block;
     font-size: 2.5rem;
 }
+.valores article:hover {
+    background: #2A6EBD;
+}
+.valores article:hover h3, .valores article:hover .icono, .valores article:hover p {
+    color: white;
+}
 
 /* COBERTURA */
 .cobertura ul {
     display: grid;
     gap: 0.6rem;
     max-width: 15rem;
-    margin-block: 1rem;
+    margin-block: 1rem auto;
     padding: 0;
     list-style: none;
 }
@@ -178,16 +200,48 @@ section h2 {
 
 /* LLAMADA FINAL */
 .llamada {
-    background-color: #063F99;
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #063F99;
+    color: white;
+    overflow: hidden;
+}
+.llamada img {
+    width: 100%;
+    height: clamp(180px, 25vw, 280px);
+    object-fit: cover;
+    object-position: center;
+    mask-image: linear-gradient(to bottom, black 65%, transparent);
+}
+.llamada div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
     text-align: center;
 }
-
 .llamada h2 {
-    color: #ffffff;
+    color: white;
+    text-align: center;
 }
-a.boton-whatsapp,
-a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
+.llamada .boton {
+    display: table;
+    margin: 1rem auto;
+    padding: .8rem 1.5rem;
+    background: #25D366;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.llamada .boton:hover {
+    background: #1ebe5d;
+    transform: scale(1.03);
+}
+a.boton-whatsapp, a.boton-whatsapp i { 
+    color: #ffffff; font-size: 2rem; }
 /* TABLET */
 @media (min-width: 48rem) {
     section {
@@ -202,24 +256,23 @@ a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.15));
     }
 
-    .presentacion,
-    .cobertura {
+    .presentacion, .cobertura {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "texto imagen";
         gap: 3rem;
         align-items: center;
     }
 
-    .presentacion-texto,
-    .cobertura-texto {
+    .presentacion-texto, .cobertura-texto {
         grid-area: texto;
     }
 
-    .presentacion img,
-    .cobertura img {
+    .presentacion img, .cobertura img {
         grid-area: imagen;
     }
-
+ .cobertura img {
+        height: clamp(250px, 28vw, 350px);
+    }
     .cobertura ul {
         grid-template-columns: repeat(3, 1fr);
         max-width: none;
@@ -234,6 +287,30 @@ a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
         grid-column: 1 / -1;
         text-align: center;
     }
+    .llamada {
+        flex-direction: row;
+        align-items: center;
+    }
+    .llamada img {
+        width: 30%;
+        height: auto;
+        align-self: stretch;
+        mask-image: linear-gradient(to right, black 65%, transparent);
+    }
+    .llamada div {
+        flex: 1;
+        padding: 2rem;
+    }
+    section.servicios {
+        flex-direction: row;
+        min-height: 420px;
+    }
+    .servicios > div, .servicios > img {
+        width: 50%;
+    }
+    .servicios > img {
+        height: 420px;
+    }
 }
 
 /* ESCRITORIO */
@@ -245,26 +322,19 @@ a.boton-whatsapp i { color: #ffffff; font-size: 2rem; }
 
 /* MODO OSCURO (el del nav está en comun.css) */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0f172a;
+  body {
+        background: #0f172a;
         color: #cbd5e1;
     }
-    .alt {
-        background-color: #1e293b;
+    .alt, .valores article, .cobertura li {
+        background: #1e293b;
     }
     .valores article {
-        background-color: #1e293b;
         border-color: #334155;
         border-top-color: #7fb0ff;
         box-shadow: none;
     }
-    .cobertura li {
-        background-color: #1e293b;
-    }
-    section h2,
-    .valores h3,
-    .valores .icono,
-    .cobertura li {
+    section h2, .valores h3, .valores .icono, .cobertura li {
         color: #7fb0ff;
     }
 }
