@@ -112,13 +112,13 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-1rem);
-    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
 }
 
 .nav-links.abierto {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
 }
 
 .nav-links li {
