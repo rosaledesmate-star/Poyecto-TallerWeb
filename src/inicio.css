@@ -1,7 +1,6 @@
 /* SECCIONES (solo dentro de la página de inicio) */
 :where(.pagina-inicio) section {
     padding: 2.75rem max(1.5rem, calc((100% - 67.5rem) / 2));
-    /* contenido centrado, máx. 1080px */
 }
 
 .alt {
@@ -108,7 +107,7 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* PRESENTACIÓN Y COBERTURA */
+/* PRESENTACION Y COBERTURA */
 .presentacion,
 .cobertura {
     display: grid;
@@ -356,7 +355,7 @@ section.servicios {
     }
 }
 
-/* MODO OSCURO (el body y el nav están en comun.css) */
+/* MODO OSCURO */
 @media (prefers-color-scheme: dark) {
     .alt,
     .valores article,

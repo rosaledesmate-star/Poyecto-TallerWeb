@@ -65,7 +65,7 @@ export default function Contacto() {
     const nuevosErrores = validar(datos)
     setErrores(nuevosErrores)
 
-    // Si hay errores: lleva el foco al primer campo inválido y no envía
+    // Si hay errores: lleva el foco al primer campo invalido y no envia
     for (const campo of CAMPOS) {
       if (nuevosErrores[campo]) {
         formulario.elements[campo].focus()

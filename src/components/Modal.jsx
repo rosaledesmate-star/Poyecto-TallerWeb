@@ -7,8 +7,8 @@ export default function Modal({ abierto, onCerrar, titulo, children }) {
   const caja = useRef(null)
   const botonCerrar = useRef(null)
 
-  // Al abrir: guarda quién tenía el foco, bloquea el scroll y enfoca el botón de cerrar.
-  // Al cerrar: devuelve el scroll y el foco al elemento que abrió el modal.
+  // Al abrir: guarda quien tenia el foco, bloquea el scroll y enfoca el botón de cerrar
+  // Al cerrar: devuelve el scroll y el foco al elemento que abrio el modal
   useEffect(() => {
     if (!abierto) return
 
