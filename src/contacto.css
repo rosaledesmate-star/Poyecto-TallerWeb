@@ -1,5 +1,3 @@
-
-
 /* Banner azul*/
 .contacto-banner {
   padding: 56px 0 64px;
@@ -64,7 +62,7 @@
 }
 
 /* Texto de las columnas */
-.contacto-formulario > p {
+.contacto-formulario>p {
   margin: 0 0 22px;
   font-size: 0.85rem;
 }
@@ -194,6 +192,18 @@
   .contacto-banner h1 {
     font-size: 2.2rem;
   }
+
+  .campo-error {
+    display: block;
+    color: #b42318;
+    font-size: 0.8rem;
+  }
+
+  .formulario-contacto input[aria-invalid="true"],
+  .formulario-contacto textarea[aria-invalid="true"] {
+    border-color: #b42318;
+  }
+
 }
 
 /* 6. MODO OSCURO (el de la cabecera está en comun.css) */
@@ -252,5 +262,16 @@
     border-left-color: #7fb0ff;
     background: #172554;
     color: #7fb0ff;
+  }
+
+  .campo-error {
+    display: block;
+    color: #b42318;
+    font-size: 0.8rem;
+  }
+
+  .formulario-contacto input[aria-invalid="true"],
+  .formulario-contacto textarea[aria-invalid="true"] {
+    border-color: #b42318;
   }
 }

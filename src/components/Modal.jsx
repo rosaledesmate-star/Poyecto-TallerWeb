@@ -1,25 +1,50 @@
 import { useEffect, useRef } from 'react'
 import '../modal.css'
 
+const ENFOCABLES = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
 export default function Modal({ abierto, onCerrar, titulo, children }) {
+  const caja = useRef(null)
   const botonCerrar = useRef(null)
 
-  // Al abrir: bloquea el scroll de la página y lleva el foco al botón de cerrar
+  // Al abrir: guarda quién tenía el foco, bloquea el scroll y enfoca el botón de cerrar.
+  // Al cerrar: devuelve el scroll y el foco al elemento que abrió el modal.
   useEffect(() => {
     if (!abierto) return
 
+    const elementoPrevio = document.activeElement
     document.body.classList.add('modal-abierto')
     botonCerrar.current.focus()
 
-    return () => document.body.classList.remove('modal-abierto')
+    return () => {
+      document.body.classList.remove('modal-abierto')
+      if (elementoPrevio) elementoPrevio.focus()
+    }
   }, [abierto])
 
-  // Cierra con la tecla Escape
+  // Teclado: Escape cierra y Tab no sale del modal (focus trapping)
   useEffect(() => {
     if (!abierto) return
 
     function alPresionarTecla(e) {
-      if (e.key === 'Escape') onCerrar()
+      if (e.key === 'Escape') {
+        onCerrar()
+        return
+      }
+
+      if (e.key !== 'Tab') return
+
+      const enfocables = caja.current.querySelectorAll(ENFOCABLES)
+      const primero = enfocables[0]
+      const ultimo = enfocables[enfocables.length - 1]
+
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault()
+        ultimo.focus()
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault()
+        primero.focus()
+      }
     }
 
     document.addEventListener('keydown', alPresionarTecla)
@@ -33,6 +58,7 @@ export default function Modal({ abierto, onCerrar, titulo, children }) {
     <div className="modal-fondo" onClick={onCerrar}>
       {/* Clic dentro de la caja: no cierra */}
       <div
+        ref={caja}
         className="modal-caja"
         role="dialog"
         aria-modal="true"

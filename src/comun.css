@@ -94,20 +94,24 @@ body {
 /* Lista de enlaces: cerrada por defecto, se despliega con .abierto */
 .nav-links {
     list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    visibility: hidden;
     background-color: #063F99;
     line-height: normal;
-    transition: max-height 0.3s ease, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
 }
 
 .nav-links.abierto {
-    max-height: 20rem;                   /* 320px */
+    opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 .nav-links li {
@@ -257,12 +261,13 @@ footer {
 
     /* Los enlaces vuelven a verse en una fila */
     .nav-links {
+        position: static;
         flex-direction: row;
         gap: 1.25rem;                    /* 20px */
         width: auto;
-        max-height: none;
-        overflow: visible;
+        opacity: 1;
         visibility: visible;
+        transform: none;
         background-color: transparent;
         margin-right: 1.25rem;           /* 20px */
     }
