@@ -63,7 +63,7 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 34rem;
-    padding-block: 2rem;
+    padding: 2rem 5%;
     overflow: hidden;
     background-color: #1e293b;
     color: #ffffff;
@@ -98,12 +98,14 @@
 .portada h1 {
     max-width: 36rem;
     font-size: clamp(1.3rem, 0.6rem + 3.5vw, 3.5rem);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .portada p {
     max-width: 32rem;
     margin: 1.25rem 0 1.75rem;
     font-size: clamp(0.9rem, 0.75rem + 0.8vw, 1.25rem);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* PRESENTACIÓN Y COBERTURA */
@@ -119,6 +121,32 @@
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: 0.75rem;
+}
+
+/* SERVICIOS */
+section.servicios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.servicios > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.servicios > img {
+    width: 100%;
+    height: clamp(200px, 35vw, 420px);
+    object-fit: cover;
+    object-position: center;
 }
 
 /* VALORES */
@@ -152,12 +180,22 @@
     font-size: 2.5rem;
 }
 
+.valores article:hover {
+    background: #2A6EBD;
+}
+
+.valores article:hover h3,
+.valores article:hover .icono,
+.valores article:hover p {
+    color: #ffffff;
+}
+
 /* COBERTURA */
 .cobertura ul {
     display: grid;
     gap: 0.6rem;
     max-width: 15rem;
-    margin-block: 1rem;
+    margin-block: 1rem auto;
     padding: 0;
     list-style: none;
 }
@@ -180,13 +218,52 @@
 
 /* LLAMADA FINAL */
 .llamada {
-    background-color: #063F99;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #063F99;
     color: #ffffff;
+    overflow: hidden;
+}
+
+.llamada img {
+    width: 100%;
+    height: clamp(180px, 25vw, 280px);
+    object-fit: cover;
+    object-position: center;
+    mask-image: linear-gradient(to bottom, black 65%, transparent);
+}
+
+.llamada div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
     text-align: center;
 }
 
 .llamada h2 {
     color: #ffffff;
+    text-align: center;
+}
+
+.llamada .boton {
+    display: table;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+    border-color: #25D366;
+    background: #25D366;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.llamada .boton:hover {
+    border-color: #1ebe5d;
+    background: #1ebe5d;
+    transform: scale(1.03);
 }
 
 /* TABLET */
@@ -221,6 +298,10 @@
         grid-area: imagen;
     }
 
+    .cobertura img {
+        height: clamp(250px, 28vw, 350px);
+    }
+
     .cobertura ul {
         grid-template-columns: repeat(3, 1fr);
         max-width: none;
@@ -235,6 +316,37 @@
         grid-column: 1 / -1;
         text-align: center;
     }
+
+    .llamada {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .llamada img {
+        width: 30%;
+        height: auto;
+        align-self: stretch;
+        mask-image: linear-gradient(to right, black 65%, transparent);
+    }
+
+    .llamada div {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    section.servicios {
+        flex-direction: row;
+        min-height: 420px;
+    }
+
+    .servicios > div,
+    .servicios > img {
+        width: 50%;
+    }
+
+    .servicios > img {
+        height: 420px;
+    }
 }
 
 /* ESCRITORIO */
@@ -246,19 +358,16 @@
 
 /* MODO OSCURO (el body y el nav están en comun.css) */
 @media (prefers-color-scheme: dark) {
-    .alt {
+    .alt,
+    .valores article,
+    .cobertura li {
         background-color: #1e293b;
     }
 
     .valores article {
-        background-color: #1e293b;
         border-color: #334155;
         border-top-color: #7fb0ff;
         box-shadow: none;
-    }
-
-    .cobertura li {
-        background-color: #1e293b;
     }
 
     :where(.pagina-inicio) section h2,

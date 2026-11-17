@@ -8,36 +8,33 @@ export default function Inicio() {
   }, [])
 
   return (
-  <div className="pagina-inicio">
-    {/* Portada */}
-    <section className="portada">
-      <img
-        src="/banner.png"
-        alt="Camión con plataforma de Transporte PROA al atardecer"
-        fetchPriority="high"
-      />
-      <small>Servicios de transporte de carga</small>
-      <h1>Transportamos tu carga con seguridad y puntualidad</h1>
-      <p>
-        Brindamos soluciones de transporte con plataforma para empresas que buscan confianza,
-        eficiencia y compromiso en cada traslado.
-      </p>
-      <Link className="boton claro" to="/contacto">Solicitar cotización</Link>
-    </section>
+    <div className="pagina-inicio">
+      {/* Portada */}
+      <section className="portada">
+        <img
+          src="/banner.png"
+          alt="Camión con plataforma de Transporte PROA al atardecer"
+          fetchPriority="high"
+        />
+        <small>Servicios de transporte de carga</small>
+        <h1>Movilizamos tu carga con seguridad, eficiencia y puntualidad</h1>
+        <p>Transporte terrestre de carga pesada con soluciones confiables para cada destino.</p>
+        <Link className="boton claro" to="/contacto">Solicitar cotización</Link>
+      </section>
 
       {/* Presentación de la empresa */}
       <section className="presentacion">
         <div className="presentacion-texto">
-          <h2>Comprometidos con cada destino</h2>
+          <h2>Experiencia y compromiso en cada destino</h2>
           <p>
-            En TRANSPORTE PROA trabajamos con compromiso y responsabilidad para brindar soluciones
-            de transporte de carga con plataforma. Nuestra experiencia nos permite atender las
-            necesidades de nuestros clientes, priorizando la seguridad, la puntualidad y el
-            cumplimiento de cada servicio.
+            Desde 2008, en Transporte Proa S.A.C. brindamos soluciones de transporte terrestre de
+            carga, priorizando la seguridad, eficiencia y puntualidad. Trabajamos con
+            transportistas asociados para ofrecer un servicio confiable y adaptado a las
+            necesidades de nuestros clientes.
           </p>
           <Link className="boton" to="/acerca-de">Conocer la empresa</Link>
         </div>
-        <img src="/acerca.png" alt="Imagen de la empresa Transporte PROA" loading="lazy" />
+        <img src="/presentacion.jpeg" alt="Imagen de la empresa Transporte PROA" loading="lazy" />
       </section>
 
       {/* Valores */}
@@ -62,21 +59,22 @@ export default function Inicio() {
 
       {/* Servicios */}
       <section className="servicios">
-        <h2>Nuestros servicios</h2>
-        <p>
-          Ofrecemos servicios de transporte de carga con plataforma, orientados al traslado de
-          materiales y mercancías compatibles con las características de nuestras unidades.
-        </p>
-        <Link className="boton" to="/servicios">Ver servicios</Link>
+        <div>
+          <h2>¿Listo para llevar tu carga a su destino?</h2>
+          <p>Conoce cómo trabajamos y descubre nuestra propuesta de transporte.</p>
+          <Link className="boton" to="/servicios">DESCUBRE NUESTRO SERVICIO</Link>
+        </div>
+        <img src="/22.jpeg" alt="Transporte de carga" />
       </section>
 
       {/* Cobertura */}
       <section className="cobertura alt">
         <div className="cobertura-texto">
-          <h2>Nuestra cobertura</h2>
+          <h2>Llegamos donde tu carga lo necesita.</h2>
           <p>
-            Atendemos rutas en Lima, Cañete, Chincha, Pisco e Ica, brindando soluciones de
-            transporte de carga.
+            Nuestra cobertura comprende importantes localidades del corredor sur de la costa
+            peruana, permitiéndonos atender las necesidades de transporte de nuestros clientes en
+            diferentes destinos.
           </p>
           <ul>
             <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Lima</li>
@@ -85,7 +83,7 @@ export default function Inicio() {
             <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Pisco</li>
             <li><i className="fa-solid fa-location-dot" aria-hidden="true"></i> Ica</li>
           </ul>
-          <Link className="boton" to="/contacto">Consultar una ruta</Link>
+          <Link className="boton" to="/contacto">CONSULTAR UNA RUTA</Link>
         </div>
         <img
           src="/mapa.jpeg"
@@ -98,9 +96,19 @@ export default function Inicio() {
 
       {/* Llamada final */}
       <section className="llamada">
-        <h2>¿Necesitas transportar tu carga?</h2>
-        <p>Contáctanos para consultar sobre nuestro servicio.</p>
-        <Link className="boton claro" to="/contacto">Cotizar servicio</Link>
+        <img src="/acerca.png" alt="" />
+        <div>
+          <h2>¿Necesitas transportar tu carga?</h2>
+          <p>Contáctanos para consultar sobre nuestro servicio.</p>
+          <a
+            className="boton"
+            href="https://wa.me/51996436009?text=Hola%2C%20Transporte%20PROA%0A%0ADeseo%20solicitar%20una%20cotizaci%C3%B3n%20de%20transporte%20de%20carga.%0A%0APunto%20de%20recojo%3A%0APunto%20de%20destino%3A%0ATipo%20de%20carga%3A%0APeso%20aproximado%20en%20toneladas%3A%0AFecha%20del%20servicio%3A%0AInformaci%C3%B3n%20adicional%3A%0A%0AQuedo%20atento%20a%20su%20respuesta.%20Muchas%20gracias."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            COTIZA HOY!
+          </a>
+        </div>
       </section>
     </div>
   )
