@@ -377,3 +377,123 @@ section.servicios {
         color: #7fb0ff;
     }
 }
+/* MODO DALTÓNICO */
+html.modo-daltonico .alt {
+  background-color: #eef2ff;
+}
+
+html.modo-daltonico :where(.pagina-inicio) section h2,
+html.modo-daltonico .valores h3,
+html.modo-daltonico .valores .icono {
+  color: #004e98;
+}
+
+html.modo-daltonico .boton {
+  border-color: #004e98;
+  background-color: #004e98;
+  color: #ffffff;
+}
+
+html.modo-daltonico .boton:hover {
+  background-color: #b45309;
+  border-color: #b45309;
+}
+
+html.modo-daltonico .claro {
+  background-color: #fef3c7;
+  border-color: #d97706;
+  color: #78350f;
+}
+
+html.modo-daltonico .claro:hover {
+  background-color: #fde68a;
+  border-color: #b45309;
+  color: #78350f;
+}
+
+html.modo-daltonico .valores article {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  border-top: 4px solid #004e98;
+  box-shadow: 0 4px 14px rgba(0, 78, 152, 0.08);
+}
+
+html.modo-daltonico .valores article:hover {
+  background: #004e98;
+}
+
+html.modo-daltonico .valores article:hover h3,
+html.modo-daltonico .valores article:hover .icono,
+html.modo-daltonico .valores article:hover p {
+  color: #ffffff;
+}
+
+html.modo-daltonico .cobertura li {
+  background-color: #ffffff;
+  border-color: #004e98;
+  color: #004e98;
+}
+
+html.modo-daltonico .cobertura li:hover {
+  background-color: #d97706;
+  border-color: #d97706;
+  color: #ffffff;
+}
+
+html.modo-daltonico .llamada {
+  background: #002b5b;
+  color: #ffffff;
+}
+
+html.modo-daltonico .llamada h2 {
+  color: #ffffff;
+}
+
+html.modo-daltonico .llamada .boton {
+  border-color: #f59e0b;
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+html.modo-daltonico .llamada .boton:hover {
+  border-color: #fbbf24;
+  background: #fbbf24;
+  color: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-daltonico .alt,
+  html.modo-daltonico .valores article,
+  html.modo-daltonico .cobertura li {
+    background-color: #111827;
+  }
+
+  html.modo-daltonico .valores article {
+    border-color: #334155;
+    border-top-color: #38bdf8;
+    box-shadow: none;
+  }
+
+  html.modo-daltonico :where(.pagina-inicio) section h2,
+  html.modo-daltonico .valores h3,
+  html.modo-daltonico .valores .icono,
+  html.modo-daltonico .cobertura li {
+    color: #7dd3fc;
+  }
+
+  html.modo-daltonico .valores article:hover {
+    background: #1e293b;
+  }
+
+  html.modo-daltonico .valores article:hover h3,
+  html.modo-daltonico .valores article:hover .icono,
+  html.modo-daltonico .valores article:hover p {
+    color: #fbbf24;
+  }
+
+  html.modo-daltonico .cobertura li:hover {
+    background-color: #d97706;
+    border-color: #fbbf24;
+    color: #ffffff;
+  }
+}

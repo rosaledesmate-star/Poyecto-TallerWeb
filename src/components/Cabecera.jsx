@@ -3,10 +3,22 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default function Cabecera() {
   const [abierto, setAbierto] = useState(false)
+  const [modoDaltonico, setModoDaltonico] = useState(() => {
+    return localStorage.getItem('modoDaltonico') === 'true'
+  })
 
   function cerrarMenu() {
     setAbierto(false)
   }
+useEffect(() => {
+    const root = document.documentElement
+    if (modoDaltonico) {
+      root.classList.add('modo-daltonico')
+    } else {
+      root.classList.remove('modo-daltonico')
+    }
+    localStorage.setItem('modoDaltonico', String(modoDaltonico))
+  }, [modoDaltonico])
 
   // Cierra el menú con la tecla Escape
   useEffect(() => {
@@ -48,6 +60,16 @@ export default function Cabecera() {
           <li><NavLink to="/acerca-de" onClick={cerrarMenu}>Acerca de</NavLink></li>
           <li><NavLink to="/servicios" onClick={cerrarMenu}>Servicios</NavLink></li>
           <li><NavLink to="/contacto" onClick={cerrarMenu}>Contacto</NavLink></li>
+          <li className="item-daltonico">
+            <button
+              type="button"
+              aria-pressed={modoDaltonico}
+              className={'boton-daltonico' + (modoDaltonico ? ' activo' : '')}
+              onClick={() => setModoDaltonico((prev) => !prev)}
+            >
+              Modo daltónico
+            </button>
+           </li>
         </ul>
 
       </nav>

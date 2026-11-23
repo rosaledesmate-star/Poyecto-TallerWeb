@@ -127,3 +127,65 @@ body.modal-abierto {
         outline-color: #7fb0ff;
     }
 }
+
+/* MODO DALTÓNICO */
+html.modo-daltonico .modal-caja {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-top: 4px solid #004e98;
+}
+
+html.modo-daltonico .modal-caja h2,
+html.modo-daltonico .modal-cerrar:hover {
+  color: #004e98;
+}
+
+html.modo-daltonico .modal-cerrar {
+  color: #0f172a;
+}
+
+html.modo-daltonico .modal-boton {
+  background: #004e98;
+  color: #ffffff;
+}
+
+html.modo-daltonico .modal-boton:hover {
+  background: #b45309;
+}
+
+html.modo-daltonico .modal-cerrar:focus-visible,
+html.modo-daltonico .modal-boton:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-daltonico .modal-caja {
+    background-color: #111827;
+    color: #f1f5f9;
+    border-top-color: #38bdf8;
+  }
+
+  html.modo-daltonico .modal-caja h2,
+  html.modo-daltonico .modal-cerrar:hover {
+    color: #7dd3fc;
+  }
+
+  html.modo-daltonico .modal-cerrar {
+    color: #f1f5f9;
+  }
+
+  html.modo-daltonico .modal-boton {
+    background: #0284c7;
+    color: #ffffff;
+  }
+
+  html.modo-daltonico .modal-boton:hover {
+    background: #d97706;
+  }
+
+  html.modo-daltonico .modal-cerrar:focus-visible,
+  html.modo-daltonico .modal-boton:focus-visible {
+    outline-color: #fbbf24;
+  }
+}
