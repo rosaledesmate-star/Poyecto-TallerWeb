@@ -275,3 +275,156 @@
     border-color: #b42318;
   }
 }
+/* MODO DALTÓNICO */
+html.modo-daltonico .contacto-banner {
+  background: #004e98;
+}
+
+html.modo-daltonico .contacto-contenido {
+  background: #f8fafc;
+}
+
+html.modo-daltonico .contacto-datos,
+html.modo-daltonico .contacto-formulario {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 78, 152, 0.08);
+  color: #0f172a;
+}
+
+html.modo-daltonico .contacto-datos h2,
+html.modo-daltonico .contacto-formulario h2,
+html.modo-daltonico .tabla-contacto th,
+html.modo-daltonico .tabla-contacto a {
+  color: #004e98;
+}
+
+html.modo-daltonico .tabla-contacto a:hover {
+  color: #b45309;
+}
+
+html.modo-daltonico .tabla-contacto th,
+html.modo-daltonico .tabla-contacto td {
+  border-bottom-color: #cbd5e1;
+}
+
+html.modo-daltonico .tabla-contacto tr:last-child th,
+html.modo-daltonico .tabla-contacto tr:last-child td {
+  border-bottom: 0;
+}
+
+html.modo-daltonico .formulario-contacto input,
+html.modo-daltonico .formulario-contacto textarea {
+  border-color: #94a3b8;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+html.modo-daltonico .formulario-contacto input:focus,
+html.modo-daltonico .formulario-contacto textarea:focus {
+  outline: 2px solid #d97706;
+  outline-offset: 1px;
+}
+
+html.modo-daltonico .boton-enviar {
+  background: #004e98;
+  color: #ffffff;
+}
+
+html.modo-daltonico .boton-enviar:hover {
+  background: #b45309;
+  filter: none;
+}
+
+html.modo-daltonico .estado-formulario {
+  border-left-color: #d97706;
+  background: #fef3c7;
+  color: #78350f;
+}
+
+html.modo-daltonico .campo-error {
+  display: block;
+  color: #9a3412;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+html.modo-daltonico .formulario-contacto input[aria-invalid="true"],
+html.modo-daltonico .formulario-contacto textarea[aria-invalid="true"] {
+  border-color: #9a3412;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-daltonico .contacto-banner {
+    background: #002b5b;
+  }
+
+  html.modo-daltonico .contacto-contenido {
+    background: #090d16;
+  }
+
+  html.modo-daltonico .contacto-datos,
+  html.modo-daltonico .contacto-formulario {
+    border-color: #334155;
+    background: #111827;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    color: #f1f5f9;
+  }
+
+  html.modo-daltonico .contacto-datos h2,
+  html.modo-daltonico .contacto-formulario h2,
+  html.modo-daltonico .tabla-contacto th,
+  html.modo-daltonico .tabla-contacto a {
+    color: #7dd3fc;
+  }
+
+  html.modo-daltonico .tabla-contacto a:hover {
+    color: #fbbf24;
+  }
+
+  html.modo-daltonico .tabla-contacto th,
+  html.modo-daltonico .tabla-contacto td {
+    border-bottom-color: #334155;
+  }
+
+  html.modo-daltonico .tabla-contacto tr:last-child th,
+  html.modo-daltonico .tabla-contacto tr:last-child td {
+    border-bottom: 0;
+  }
+
+  html.modo-daltonico .formulario-contacto input,
+  html.modo-daltonico .formulario-contacto textarea {
+    border-color: #475569;
+    background: #090d16;
+    color: #f1f5f9;
+  }
+
+  html.modo-daltonico .formulario-contacto input:focus,
+  html.modo-daltonico .formulario-contacto textarea:focus {
+    outline-color: #fbbf24;
+  }
+
+  html.modo-daltonico .boton-enviar {
+    background: #0284c7;
+    color: #ffffff;
+  }
+
+  html.modo-daltonico .boton-enviar:hover {
+    background: #d97706;
+  }
+
+  html.modo-daltonico .estado-formulario {
+    border-left-color: #fbbf24;
+    background: #1e293b;
+    color: #fde68a;
+  }
+
+  html.modo-daltonico .campo-error {
+    color: #fbbf24;
+  }
+
+  html.modo-daltonico .formulario-contacto input[aria-invalid="true"],
+  html.modo-daltonico .formulario-contacto textarea[aria-invalid="true"] {
+    border-color: #fbbf24;
+  }
+}

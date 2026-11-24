@@ -199,3 +199,47 @@ position: relative;
         color: #cbd5e1;
     }
 }
+/* MODO DALTÓNICO */
+html.modo-daltonico .textoinformativo h2,
+html.modo-daltonico .textomision h2,
+html.modo-daltonico .textovision h2 {
+  color: #004e98;
+}
+
+html.modo-daltonico .textoinformativo p,
+html.modo-daltonico .textomision p,
+html.modo-daltonico .textovision p {
+  color: #0f172a;
+}
+
+html.modo-daltonico .QUIENES,
+html.modo-daltonico .VISION {
+  background-color: #ffffff;
+}
+
+html.modo-daltonico .MISION {
+  background-color: #fef3c7;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-daltonico .QUIENES,
+  html.modo-daltonico .VISION {
+    background-color: #090d16;
+  }
+
+  html.modo-daltonico .MISION {
+    background-color: #111827;
+  }
+
+  html.modo-daltonico .textoinformativo h2,
+  html.modo-daltonico .textomision h2,
+  html.modo-daltonico .textovision h2 {
+    color: #7dd3fc;
+  }
+
+  html.modo-daltonico .textoinformativo p,
+  html.modo-daltonico .textomision p,
+  html.modo-daltonico .textovision p {
+    color: #f1f5f9;
+  }
+}

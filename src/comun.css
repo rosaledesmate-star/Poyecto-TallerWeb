@@ -135,6 +135,39 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+/* Daltomismo */
+.item-daltonico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 0 1rem;
+}
+
+.boton-daltonico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4375rem 0.875rem;         /* 7px 14px */
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 0.375rem;             /* 6px */
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.875rem;                 /* 14px */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-daltonico:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.boton-daltonico.activo {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: #0f172a;
+}
 
 main {
     margin-top: 4.0625rem;
@@ -317,6 +350,28 @@ footer {
         text-decoration: underline;
     }
 
+  .item-daltonico {
+        padding: 0;
+        transform: translateY(-4px);
+    }
+
+    .boton-daltonico {
+        background-color: #eef2ff;
+        border-color: #0D3896;
+        color: #0D3896;
+        font-size: 0.9375rem;
+    }
+
+    .boton-daltonico:hover {
+        background-color: #e0e7ff;
+    }
+
+    .boton-daltonico.activo {
+        background-color: #f59e0b;
+        border-color: #b45309;
+        color: #0f172a;
+    }
+
     .boton-whatsapp {
         right: 25px;
         bottom: 25px;
@@ -382,4 +437,89 @@ footer {
         color: #7fb0ff;
     }
 
+}
+html.modo-daltonico body {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+html.modo-daltonico .cabecera {
+    background-color: #ffffff;
+    border-bottom: 2px solid #004e98;
+}
+
+html.modo-daltonico .nav-links {
+    background-color: #004e98;
+}
+
+html.modo-daltonico .boton-menu span {
+    background-color: #004e98;
+}
+
+html.modo-daltonico .boton-whatsapp {
+    background-color: #0077b6;
+}
+
+html.modo-daltonico footer,
+html.modo-daltonico .copyright {
+    background-color: #002b5b;
+    color: #ffffff;
+}
+
+html.modo-daltonico .boton-daltonico.activo {
+    background-color: #d97706;
+    border-color: #78350f;
+    color: #ffffff;
+}
+
+@media (min-width: 48rem) {
+    html.modo-daltonico .nav-links {
+        background-color: transparent;
+    }
+
+    html.modo-daltonico .nav-links a {
+        color: #004e98;
+    }
+
+    html.modo-daltonico .nav-links a:hover {
+        color: #b45309;
+    }
+
+    html.modo-daltonico .boton-daltonico {
+        background-color: #fef3c7;
+        border-color: #d97706;
+        color: #78350f;
+    }
+
+    html.modo-daltonico .boton-daltonico.activo {
+        background-color: #b45309;
+        border-color: #78350f;
+        color: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html.modo-daltonico body {
+        background-color: #090d16;
+        color: #f1f5f9;
+    }
+
+    html.modo-daltonico .cabecera {
+        background-color: #111827;
+        border-bottom-color: #38bdf8;
+    }
+
+    html.modo-daltonico .boton-menu span {
+        background-color: #f1f5f9;
+    }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 48rem) {
+    html.modo-daltonico .nav-links a {
+        color: #7dd3fc;
+    }
+
+    html.modo-daltonico .nav-links a:hover {
+        color: #fbbf24;
+    }
 }

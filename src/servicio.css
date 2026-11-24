@@ -212,3 +212,50 @@
         color: #7fb0ff;
     }
 }
+
+/* MODO DALTÓNICO */
+html.modo-daltonico .texto-presentacion p {
+  border-top-color: #f59e0b;
+}
+
+html.modo-daltonico .etiqueta {
+  color: #b45309;
+}
+
+html.modo-daltonico .intro-servicios h2,
+html.modo-daltonico .lista-servicios h2,
+html.modo-daltonico .servicio h3,
+html.modo-daltonico .puntos h4,
+html.modo-daltonico .puntos .icono {
+  color: #004e98;
+}
+
+html.modo-daltonico .servicio span {
+  color: #b45309;
+}
+
+html.modo-daltonico .lista-servicios {
+  background-color: #f8fafc;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.modo-daltonico .lista-servicios {
+    background-color: #111827;
+  }
+
+  html.modo-daltonico .etiqueta {
+    color: #fbbf24;
+  }
+
+  html.modo-daltonico .servicio span {
+    color: #fbbf24;
+  }
+
+  html.modo-daltonico .intro-servicios h2,
+  html.modo-daltonico .lista-servicios h2,
+  html.modo-daltonico .servicio h3,
+  html.modo-daltonico .puntos h4,
+  html.modo-daltonico .puntos .icono {
+    color: #7dd3fc;
+  }
+}
